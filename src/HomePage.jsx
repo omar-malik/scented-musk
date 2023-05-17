@@ -1,10 +1,9 @@
-import React from 'react';
-
+import Navbar from "./Navbar";
 function HomePage() {
   return (
-    <div>
-      <h1>As Salamu Alaykum and welcome to Scented Musk</h1>
-      <p>Feel free to ask our experts to help you find your signature scent from our range of perfumes and oils</p>
+    <div className="bg-gray-100 h-screen flex flex-col items-center">
+      <Navbar></Navbar>
+      <p className="text-lg text-center"></p>
     </div>
   );
 }

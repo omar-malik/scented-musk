@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {},
+    colors: {
+      'gold': '#a28557',
+    }
   },
   plugins: [],
 }
