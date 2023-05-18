@@ -4,14 +4,17 @@ function Navbar() {
   return (
     <>
     <nav className="flex justify between items-center py-4 h-20">
-      <div className="place-content-center">
-        <a href="/" className="text-3xl mr-5 text-gold font-thin">SCENTEDMUSK</a>
+      <div className="flex space-x-4">
+      <button type="button" className="text-gray-500 hover:text-gray-700 focus:outline-none mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
       </div>
-      <div>
-        <div className="relative">
+      <div className="place-content-center px-32">
+        <a href="/" className="text-3xl text-gold font-thin">SCENTEDMUSK</a>
+      </div>
 
-        </div>
-      </div>
       <div className="flex space-x-4">
         <a href="/search" className="text-gray-500 hover:text-gray-700 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
