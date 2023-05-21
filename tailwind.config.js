@@ -7,11 +7,11 @@ export default {
     "./**/**/**/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      'gold': '#a28557',
-    }
+    extend: {
+      colors: {
+        'gold': '#a28557',
+      }
+    },
   },
   plugins: [],
-}
-
+};
