@@ -5,7 +5,7 @@ import { useState } from "react";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const fragrance = (
-    <div className="flex">
+    <div onMouseOver={() => setOpen(true)} onMouseLeave = {() => setOpen(false)}className="flex">
       FRAGRANCE
       <svg
         class="ml-0 -mr-0. h-4 w-4"
@@ -62,8 +62,10 @@ function Navbar() {
     homeFragrance,
     "BESPOKE FRAGRANCE",
   ];
+  const [open, setOpen] = useState(false);
   return (
     <>
+
       <div className="flex justify-center w-full flex-col items-center">
         <nav className="flex justify-between w-full max-w-full p-3">
           <div className="p-0 pt-5">
@@ -111,11 +113,30 @@ function Navbar() {
           </div>
         </nav>
         <div className="pt-4 lg:flex gap-5 text-xs tracking-widest hidden">
-          {links.map((link) => {
-            return <a href="/">{link}</a>;
+          {links.map((link, i) => {
+            return <a key={i} className="hover:text-gold transition duration-300" href="/">{link}</a>;
           })}
         </div>
       </div>
+      
+      {open == true && (
+        <div onMouseOver = {() => setOpen(true)} onMouseLeave = {() => setOpen(false)} className="bg-white w-full h-[550px] p-7">
+          {links.map((link, i) => {
+            return (
+              <a
+                key={i}
+                href="/"
+                className=""
+              >
+                {link}
+              </a>
+            );
+          })}
+        </div>
+      )
+
+      }
+
 
       {showMenu == true && (
         <div className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0">
