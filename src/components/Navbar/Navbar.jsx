@@ -4,69 +4,28 @@ import { useState } from "react";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const fragrance = (
-    <div
-      onMouseOver={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      className="flex"
-    >
-      FRAGRANCE
-      <svg
-        className="ml-0 -mr-0. h-4 w-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </div>
-  );
-  const gifts = (
-    <div className="flex">
-      GIFTS
-      <svg
-        className="ml-0 -mr-0. h-4 w-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
-  );
-  const homeFragrance = (
-    <div className="flex left-[-5px]">
-      HOME FRAGRANCE
-      <svg
-        className="ml-0 -mr-0. h-4 w-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </div>
-  );
-  const links = [
-    fragrance,
-    "COLLECTION",
-    gifts,
-    homeFragrance,
-    "BESPOKE FRAGRANCE",
-  ];
   const [open, setOpen] = useState(false);
+
+  const links = [
+    {
+      name: "FRAGRANCE",
+      menu: [
+        "All Perfume Oils",
+        "Men's Perfume Oils",
+        "Women's Perfume Oils",
+        "Gender Neutral Perfume Oils",
+        "Sample Pack - Perfume Oil",
+      ],
+    },
+    {
+      name: "COLLECTION",
+    },
+    {
+      name: "GIFTS",
+      menu: ["Shop all", "Gift Sets for him", "Gift Sets for her"],
+    },
+  ];
+
   return (
     <>
       <div className="flex justify-center w-full flex-col items-center">
@@ -116,35 +75,55 @@ function Navbar() {
           </div>
         </nav>
 
-        <div className="pt-4 lg:flex gap-5 text-xs tracking-widest hidden">
+        <div
+          id="navbar"
+          className="pt-4 lg:flex gap-5 text-xs tracking-widest hidden"
+          onMouseLeave={() => setOpen(false)}
+        >
           {links.map((link, i) => {
             return (
               <a
+                onMouseEnter={() => setOpen(link)}
                 key={i}
-                className="hover:text-gold transition duration-300"
+                className="flex gap-1 items-center hover:text-gold transition duration-300"
                 href="/"
               >
-                {link}
+                {link.name}
+                {link.menu && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={3}
+                    stroke="currentColor"
+                    className="w-3 h-3"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                )}
               </a>
             );
           })}
         </div>
       </div>
 
-      {open == true && (
+      {open !== false && (
         <div
           id="navbar-fragrance-dropdown"
-          onMouseOver={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
           className="bg-white w-full h-[550px] p-7"
         >
-          {links.map((link, i) => {
-            return (
-              <a key={i} href="/" className="">
-                {link}
-              </a>
-            );
-          })}
+          {open.menu &&
+            open.menu.map((link, i) => {
+              return (
+                <a key={i} href="/" className="">
+                  {link}
+                </a>
+              );
+            })}
         </div>
       )}
 
@@ -179,32 +158,35 @@ function Navbar() {
                 href="/"
                 className="p-4 text-xs hover:bg-gray-100 transition-all duration-500 border"
               >
-                {link}
+                {link.name}
               </a>
             );
           })}
         </div>
       )}
 
-      <div id="search-bar" className="bg-white h-full w-[320px] absolute right-0">
+      <div
+        id="search-bar"
+        className="bg-white h-full w-[320px] absolute right-0"
+      >
         <div className="flex">
-        <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
-        <button className="hover:rotate-[180deg] duration-[0.3s] m-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+          <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
+          <button className="hover:rotate-[180deg] duration-[0.3s] m-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
 
         <div className="flex p-7 border ">
