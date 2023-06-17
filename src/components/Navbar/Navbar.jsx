@@ -46,15 +46,15 @@ function Navbar() {
     <div className="flex left-[-5px]">
       HOME FRAGRANCE
       <svg
-        class="ml-0 -mr-0. h-4 w-4"
+        className="ml-0 -mr-0. h-4 w-4"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     </div>
@@ -186,14 +186,14 @@ function Navbar() {
         </div>
       )}
 
-      <div className="bg-white h-full w-[320px] absolute right-0">
+      <div id="search-bar" className="bg-white h-full w-[320px] absolute right-0">
         <div className="flex">
-        <h1 className="p-5 tracking-wider">SEARCH OUR SITE</h1>
-        <button className="">
+        <h1 className="p-4 tracking-wider">SEARCH OUR SITE</h1>
+        <button className="pl-[90px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 24 24"
+            viewBox="0 0 22 22"
             strokeWidth={1.5}
             stroke="currentColor"
             className="w-6 h-6"
@@ -209,7 +209,7 @@ function Navbar() {
 
         <div className="flex p-7 border ">
           <input
-            className="w-[265px] font-light text-xs h-[40px] p-3 border"
+            className="outline-none w-[265px]  placeholder-black focus:placeholder-transparent tracking-wide font-light text-xs h-[40px] p-3 border"
             placeholder="Search for products"
             type="text"
           />
