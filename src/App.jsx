@@ -1,9 +1,8 @@
-import { useState } from "react";
 import "./App.css";
 import "./index.css";
 import HomePage from "./components/HomePage";
 
-function App() {
+const App = () => {
   return (
     <>
       <div className="App">
