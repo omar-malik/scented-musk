@@ -5,6 +5,7 @@ import { useState } from "react";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   const links = [
     {
@@ -36,7 +37,6 @@ function Navbar() {
               id="menuButton"
               onClick={() => {
                 setShowMenu(true);
-                console.log(showMenu);
               }}
               type="button"
               className="text-gray-500 hover:text-gray-700 focus:outline-none md:hidden"
@@ -70,7 +70,25 @@ function Navbar() {
           </div>
 
           <div className="flex space-x-4 p-2 pt-5">
-            <SearchIcon />
+            <a
+              onClick={()=> setShowSearch(true)}
+              className="hover:text-gold transition duration-200 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </a>
             <ShoppingBasket />
           </div>
         </nav>
@@ -114,7 +132,7 @@ function Navbar() {
       {open !== false && (
         <div
           id="navbar-fragrance-dropdown"
-          className="bg-white w-full h-[550px] p-7"
+          className="bg-white w-full h-[550px] flex flex-col p-7"
         >
           {open.menu &&
             open.menu.map((link, i) => {
@@ -128,7 +146,8 @@ function Navbar() {
       )}
 
       {showMenu == true && (
-        <div className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0">
+        <div id="search"
+        className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0">
           <button
             className="absolute bg-black left-full top-0"
             onClick={() => {
@@ -165,38 +184,43 @@ function Navbar() {
         </div>
       )}
 
-      <div
-        id="search-bar"
-        className="bg-white h-full w-[320px] absolute right-0"
-      >
-        <div className="flex">
-          <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
-          <button className="hover:rotate-[180deg] duration-[0.3s] m-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
+      {showSearch == true && (
+        <div
+          id="search-bar"
+          className="bg-white h-full w-[320px] absolute right-0"
+        >
+          <div className="flex">
+            <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
+            <button
+              onClick={() => setShowSearch(false)}
+              className="hover:rotate-[180deg] duration-[0.3s] m-3"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
 
-        <div className="flex p-7 border ">
-          <input
-            className="outline-none w-[265px]  placeholder-black focus:placeholder-transparent tracking-wide font-light text-xs h-[40px] p-3 border"
-            placeholder="Search for products"
-            type="text"
-          />
+          <div className="flex p-7 border ">
+            <input
+              className="outline-none w-[265px]  placeholder-black focus:placeholder-transparent tracking-wide font-light text-xs h-[40px] p-3 border"
+              placeholder="Search for products"
+              type="text"
+            />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
