@@ -1,4 +1,4 @@
-import SearchIcon from "./SearchIcon";
+
 import ShoppingBasket from "./ShoppingBasket";
 import { useState } from "react";
 
