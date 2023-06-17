@@ -188,12 +188,12 @@ function Navbar() {
 
       <div id="search-bar" className="bg-white h-full w-[320px] absolute right-0">
         <div className="flex">
-        <h1 className="p-4 tracking-wider">SEARCH OUR SITE</h1>
-        <button className="pl-[90px]">
+        <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
+        <button className="hover:rotate-[180deg] duration-[0.3s] m-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 22 22"
+            viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
             className="w-6 h-6"
