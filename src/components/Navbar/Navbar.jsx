@@ -35,7 +35,7 @@ function Navbar() {
     <>
       <div className="flex justify-center w-full flex-col items-center">
         <nav className="flex justify-between w-full max-w-full p-3">
-          <div className="p-0 pt-5">
+          <div className="p-0 pt-4">
             <span></span>
             <button
               id="menuButton"
@@ -43,7 +43,7 @@ function Navbar() {
                 setShowMenu(true);
               }}
               type="button"
-              className="text-gray-500 hover:text-gray-700 focus:outline-none md:hidden"
+              className="w-8 h-8 text-gray-500 hover:text-gray-700 focus:outline-none md:hidden"
             >
               <MenuOpen />
             </button>
