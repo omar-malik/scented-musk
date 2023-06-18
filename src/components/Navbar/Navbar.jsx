@@ -5,12 +5,14 @@ import SearchOpen from "../../assets/SearchOpen";
 import MenuOpen from "../../assets/MenuOpen";
 import NavbarChevron from "../../assets/NavbarChevron";
 import { useState } from "react";
+import { useAtom } from "jotai";
+import { cart } from "../../Atoms.js";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [open, setOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-
+  const [cartStore, setCartStore] = useAtom(cart);
   const links = [
     {
       name: "FRAGRANCE",
@@ -110,53 +112,65 @@ function Navbar() {
 
       {showMenu == true && (
         <div
-          id="search"
-          className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0"
+          onClick={() => setShowMenu(false)}
+          className="w-full h-full absolute top-0 left-0 bg-black/60"
         >
-          <button
-            className="absolute bg-black left-full top-0"
-            onClick={() => {
-              setShowMenu(false);
-            }}
+          <div
+            id="search"
+            onClick={(event) => event.stopPropagation()}
+            className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0"
           >
-            <SearchClose />
-          </button>
+            <button
+              className="absolute bg-black left-full top-0"
+              onClick={() => {
+                setShowMenu(false);
+              }}
+            >
+              <SearchClose />
+            </button>
 
-          {links.map((link, i) => {
-            return (
-              <a
-                key={i}
-                href="/"
-                className="p-4 text-xs hover:bg-gray-100 transition-all duration-500 border"
-              >
-                {link.name}
-              </a>
-            );
-          })}
+            {links.map((link, i) => {
+              return (
+                <a
+                  key={i}
+                  href="/"
+                  className="p-4 text-xs hover:bg-gray-100 transition-all duration-500 border"
+                >
+                  {link.name}
+                </a>
+              );
+            })}
+          </div>
         </div>
       )}
 
       {showSearch == true && (
         <div
-          id="search-bar"
-          className="bg-white h-full w-[320px] absolute right-0"
+          className="absolute h-full w-full right-0 bg-black/60"
+          onClick={() => setShowSearch(false)}
         >
-          <div className="flex">
-            <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
-            <button
-              onClick={() => setShowSearch(false)}
-              className="hover:rotate-[180deg] duration-[0.3s] m-3"
-            >
-              <SearchOpen />
-            </button>
-          </div>
+          <div
+            id="search-bar"
+            onClick={(event) => event.stopPropagation()}
+            className="bg-white h-full w-[320px] absolute right-0"
+          >
+            <div className="flex">
+              <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
+              <button
+                onClick={() => setShowSearch(false)}
+                className="hover:rotate-[180deg] duration-[0.3s] m-3"
+              >
+                <SearchOpen />
+              </button>
+            </div>
 
-          <div className="flex p-7 border ">
-            <input
-              className="outline-none w-[265px]  placeholder-black focus:placeholder-transparent tracking-wide font-light text-xs h-[40px] p-3 border"
-              placeholder="Search for products"
-              type="text"
-            />
+            <div className="flex p-7 border ">
+              <input
+                className="outline-none w-[265px]  placeholder-black focus:placeholder-transparent tracking-wide font-light text-xs h-[40px] p-3 border"
+                placeholder="Search for products"
+                type="text"
+              />
+            </div>
           </div>
         </div>
       )}
