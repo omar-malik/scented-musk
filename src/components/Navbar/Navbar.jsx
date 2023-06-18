@@ -1,6 +1,9 @@
-
 import ShoppingBasket from "./ShoppingBasket";
 import Search from "../../assets/SearchIcon";
+import SearchClose from "../../assets/SearchClose";
+import SearchOpen from "../../assets/SearchOpen";
+import MenuOpen from "../../assets/MenuOpen";
+import NavbarChevron from "../../assets/NavbarChevron";
 import { useState } from "react";
 
 function Navbar() {
@@ -42,20 +45,7 @@ function Navbar() {
               type="button"
               className="text-gray-500 hover:text-gray-700 focus:outline-none md:hidden"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1}
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.5h118M3.75 13h16.5m-16.5 6h20"
-                />
-              </svg>
+              <MenuOpen />
             </button>
           </div>
 
@@ -72,10 +62,10 @@ function Navbar() {
 
           <div className="flex space-x-4 p-2 pt-4">
             <button
-              onClick={()=> setShowSearch(true)}
+              onClick={() => setShowSearch(true)}
               className="w-6 h-6 hover:text-gold transition duration-200 focus:outline-none"
             >
-            <Search />
+              <Search />
             </button>
             <ShoppingBasket />
           </div>
@@ -95,22 +85,7 @@ function Navbar() {
                 href="/"
               >
                 {link.name}
-                {link.menu && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={3}
-                    stroke="currentColor"
-                    className="w-3 h-3"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                )}
+                {link.menu && <NavbarChevron />}
               </a>
             );
           })}
@@ -134,28 +109,17 @@ function Navbar() {
       )}
 
       {showMenu == true && (
-        <div id="search"
-        className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0">
+        <div
+          id="search"
+          className="flex flex-col bg-white h-full w-[320px] fixed top-0 left-0"
+        >
           <button
             className="absolute bg-black left-full top-0"
             onClick={() => {
               setShowMenu(false);
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="white"
-              className="w-[51px] h-[51px] p-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <SearchClose />
           </button>
 
           {links.map((link, i) => {
@@ -183,20 +147,7 @@ function Navbar() {
               onClick={() => setShowSearch(false)}
               className="hover:rotate-[180deg] duration-[0.3s] m-3"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <SearchOpen />
             </button>
           </div>
 
