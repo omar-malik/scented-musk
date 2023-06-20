@@ -36,7 +36,7 @@ function Navbar() {
   return (
     <>
       <div className="fixed top-0 z-10 bg-gray-100 flex justify-center w-full flex-col items-center">
-        <nav className="flex justify-between w-full max-w-full p-3 ">
+        <nav className="flex justify-between w-full max-w-full p-3">
           <div className="p-0 pt-4">
             
             <button
@@ -83,7 +83,7 @@ function Navbar() {
               <a
                 onMouseEnter={() => setOpen(link)}
                 key={i}
-                className="flex gap-1 items-center hover:text-gold transition duration-300"
+                className="flex gap-1 pb-4 items-center hover:text-gold transition duration-300"
                 href="/"
               >
                 {link.name}
