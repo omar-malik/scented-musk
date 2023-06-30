@@ -6,7 +6,6 @@ import image2 from "../assets/images/image-2.jpg"
 function HomePage() {
 const images = [
   image1, image2
-
 ]
   return (
     <div className="bg-gray-100 h-screen flex flex-col items-center">

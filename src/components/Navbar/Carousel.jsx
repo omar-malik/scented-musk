@@ -14,8 +14,8 @@ const Carousel = ( {images} ) => {
   }, [currentImage, images.length])
 
   return (
-    <div className=" bg-white w-full">
-      <img src={images[currentImage]} alt="carousel" className=" w-full h-[700px] object-cover" />
+    <div className=" bg-white h-[700px] w-full">
+      <img src={images[currentImage]} alt="carousel" className=" w-full object-cover" />
     </div>
   )
 }
