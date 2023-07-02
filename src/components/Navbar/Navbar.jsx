@@ -178,4 +178,3 @@ function Navbar() {
   );
 }
 export default Navbar;
-'hi'
