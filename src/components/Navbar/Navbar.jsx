@@ -36,8 +36,8 @@ function Navbar() {
   return (
     <>
       <div className="fixed top-0 z-10 bg-gray-100 flex justify-center w-full flex-col items-center">
-        <nav className="flex justify-between w-full max-w-full p-3">
-          <div className="p-0 pt-4">
+        <nav className="flex justify-between w-full max-w-full p-3 h-18">
+          <div className="p-0 pt-3">
             
             <button
               id="menuButton"
@@ -51,18 +51,18 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="pt-1 absolute left-1/2 -translate-x-1/2 ">
+          <div className=" absolute left-1/2 -translate-x-1/2 ">
             <a className="" href="/">
               <div className="text-3xl text-gold font-light tracking-wide">
                 SCENTEDMUSK
               </div>
-              <div className="text-xs text-gold font-light pl-16 ml-3">
+              <div className="text-[10px] text-gold font-normal pl-[72px] ml-3">
                 L O N D O N
               </div>
             </a>
           </div>
 
-          <div className="flex space-x-4 p-2 pt-4">
+          <div className="flex space-x-4 p-2 pt-3">
             <button
               onClick={() => setShowSearch(true)}
               className="w-6 h-6 hover:text-gold transition duration-200 focus:outline-none"
