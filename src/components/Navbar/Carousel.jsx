@@ -11,11 +11,11 @@ const Carousel = ( {images} ) => {
     return () => {
       clearTimeout(timer)
     }
-  }, [currentImage, images.length])
+  }, [currentImage, images])
 
   return (
-    <div className=" bg-white h-[700px] w-full">
-      <img src={images[currentImage]} alt="carousel" className=" w-full object-cover" />
+    <div className=" bg-white h-[574px] w-full">
+      <img src={images[currentImage]} alt="carousel" className="w-full h-full object-cover" />
     </div>
   )
 }

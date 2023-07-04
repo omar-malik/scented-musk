@@ -37,7 +37,7 @@ function Navbar() {
     <>
       <div className="fixed top-0 z-10 bg-gray-100 flex justify-center w-full flex-col items-center">
         <nav className="flex justify-between w-full max-w-full p-3 h-18">
-          <div className="p-0 pt-3">
+          <div className="pt-1">
             
             <button
               id="menuButton"
