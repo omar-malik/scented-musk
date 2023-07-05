@@ -37,7 +37,7 @@ function Navbar() {
     <>
       <div className="fixed top-0 z-10 bg-gray-100 flex justify-center w-full flex-col items-center">
         <nav className="flex justify-between w-full max-w-full p-3 h-18">
-          <div className="pt-1">
+          <div className="pt-[6px]">
             
             <button
               id="menuButton"
@@ -62,7 +62,7 @@ function Navbar() {
             </a>
           </div>
 
-          <div className="flex space-x-4 p-2 pt-3">
+          <div className="flex space-x-4 p-2 pt-3 lg:pr-10">
             <button
               onClick={() => setShowSearch(true)}
               className="w-6 h-6 hover:text-gold transition duration-200 focus:outline-none"

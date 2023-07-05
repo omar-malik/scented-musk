@@ -21,7 +21,7 @@ const Carousel = ({ images }) => {
           alt="carousel"
           className="w-full h-full object-cover object-top"
         />
-        <div className="flex flex-col items-center justify-cente absolute z-30 text-white bottom-10 w-full p-7 ">
+        <div className="flex flex-col items-center justify-center absolute z-30 text-white bottom-10 w-full p-7 ">
           <div className=" flex flex-col items-center">
             <div className="font-light tracking-[1px]">PREMIUM FRAGRANCES</div>
             <div className="font-thin text-sm p-2">DISCOVER YOUR SCENT</div>
