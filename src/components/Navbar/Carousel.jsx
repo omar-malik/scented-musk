@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import oilimage from "../../assets/oil-image.jpeg"
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -25,9 +26,29 @@ const Carousel = ({ images }) => {
           <div className=" flex flex-col items-center">
             <div className="font-light tracking-[1px]">PREMIUM FRAGRANCES</div>
             <div className="font-thin text-sm p-2">DISCOVER YOUR SCENT</div>
-            <a href="" className="hover:bg-gold transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full">Shop Now</a>
+            <a
+              href=""
+              className="hover:bg-gold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+            >
+              Shop Now
+            </a>
           </div>
         </div>
+
+        <div className=" text-gray-400 text-[40px]">
+          THE SCENT COLUMN CQ ROGUE WELL
+        </div>
+
+        <div className="relative flex flex-col justify-end items-center">
+          <img className="hover" src={oilimage} alt="" />
+          <a
+              href=""
+              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+            >
+              Shop Now
+            </a>
+        </div>
+
       </div>
     </>
   );
