@@ -113,12 +113,12 @@ function Navbar() {
       {showMenu == true && (
         <div
           onClick={() => setShowMenu(false)}
-          className="w-full h-full z-20 fixed top-0 left-0 bg-black/60"
+          className="w-full h-full z-50 fixed top-0 left-0 bg-black/60"
         >
           <div
             id="search"
             onClick={(event) => event.stopPropagation()}
-            className="flex z-20 flex-col bg-white h-full w-[320px] fixed top-0 left-0"
+            className="flex z-50 flex-col bg-white h-full w-[320px] fixed top-0 left-0"
           >
             <button
               className="absolute bg-black left-full top-0"
@@ -146,13 +146,13 @@ function Navbar() {
 
       {showSearch == true && (
         <div
-          className="fixed z-20 h-full w-full right-0 bg-black/60"
+          className="fixed z-50 h-full w-full right-0 bg-black/60"
           onClick={() => setShowSearch(false)}
         >
           <div
             id="search-bar"
             onClick={(event) => event.stopPropagation()}
-            className="bg-white z-20 h-full w-[320px] absolute right-0"
+            className="bg-white z-50 h-full w-[320px] absolute right-0"
           >
             <div className="flex">
               <h1 className="p-4 tracking-wider flex grow">SEARCH OUR SITE</h1>
