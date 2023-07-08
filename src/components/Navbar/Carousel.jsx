@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import oilimage from "../../assets/oil-image.jpeg"
+import giftimage from "../../assets/giftsets.png"
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -39,8 +40,18 @@ const Carousel = ({ images }) => {
           THE SCENT COLUMN CQ ROGUE WELL
         </div>
 
-        <div className="relative flex flex-col justify-end items-center">
-          <img className="hover" src={oilimage} alt="" />
+        <div id="oil-image" className="overflow-hidden  relative flex flex-col justify-end items-center ">
+          <img className=" ease-in-out transition duration-500 transform hover:scale-105" src={oilimage} alt="" />
+          <a
+              href=""
+              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+            >
+              Shop Now
+            </a>
+        </div>
+
+        <div id="gift-image" className="overflow-hidden  relative flex flex-col justify-end items-center border-y-[1px] border-black">
+          <img className="ease-in-out transition duration-500 transform hover:scale-105" src={giftimage} alt="" />
           <a
               href=""
               className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"

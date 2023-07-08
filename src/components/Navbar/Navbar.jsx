@@ -35,7 +35,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 z-10 bg-gray-100 flex justify-center w-full flex-col items-center">
+      <div className="fixed top-0 z-50 bg-gray-100 flex justify-center w-full flex-col items-center">
         <nav className="flex justify-between w-full max-w-full p-3 h-18">
           <div className="pt-[6px]">
             
