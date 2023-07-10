@@ -13,7 +13,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/abid-ambre.webp"]
+    images: ["./images/abid-ambre.png"]
 
   },
   {
@@ -30,12 +30,12 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/arabian-nights.webp"]
 
   },
   {
     key: 3,
-    name:"Emirates",
+    name:"BLACK ROSE OIL",
     price:{
       "10ml": 21,
       "15ml": 30,
@@ -47,12 +47,12 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/black-rose.webp"]
 
   },
   {
     key: 4,
-    name:"Emirates",
+    name:"BLUE EYES OIL",
     price:{
       "10ml": 21,
       "15ml": 30,
@@ -64,12 +64,12 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/blue-eyes.webp"]
 
   },
   {
     key: 5,
-    name:"Emirates",
+    name:"EGYPTIAN MUSK",
     price:{
       "10ml": 21,
       "15ml": 30,
@@ -81,7 +81,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/egyptian-musk.webp"]
 
   },
   {
@@ -102,7 +102,7 @@ export const products = [
 
   }, {
     key: 7,
-    name:"Emirates",
+    name:"ENIGMA",
     price:{
       "10ml": 21,
       "15ml": 30,
@@ -114,7 +114,41 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/enigma.webp"]
+
+  },
+  {
+    key: 8,
+    name:"Evanto",
+    price:{
+      "10ml": 21,
+      "15ml": 30,
+      "30ml": 55,
+      "50ml": 80
+    },
+    intensity:4,
+    description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
+    base: "Amber, Cambodian Oud",
+    heart: "Vetiver",
+    top: "Rose, Saffron",
+    images: ["./images/evanto.webp"]
+
+  },
+  {
+    key: 9,
+    name:"GOLDEN DUST OIL",
+    price:{
+      "10ml": 21,
+      "15ml": 30,
+      "30ml": 55,
+      "50ml": 80
+    },
+    intensity:4,
+    description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
+    base: "Amber, Cambodian Oud",
+    heart: "Vetiver",
+    top: "Rose, Saffron",
+    images: ["./images/golden-dust.webp"]
 
   }
 ]
