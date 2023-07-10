@@ -1,7 +1,7 @@
 export const products = [
   {
     key: 1,
-    name:"Emirates",
+    name:"ABID AMBRE OIL",
     price:{
       "10ml": 21,
       "15ml": 30,
@@ -13,12 +13,12 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    images: ["./images/abid-ambre.webp"]
 
   },
   {
     key: 2,
-    name:"Emirates",
+    name:"ARABIAN NIGHTS OIl",
     price:{
       "10ml": 21,
       "15ml": 30,

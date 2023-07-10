@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-
-
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -36,30 +34,70 @@ const Carousel = ({ images }) => {
           </div>
         </div>
 
-        <div className=" text-gray-400 text-[40px]">
-          THE SCENT COLUMN CQ ROGUE WELL
+        <div className="flex flex-row text-gray-400 md:m-3 md:space-x-2 align-middle justify-center">
+          <div className="p-6">
+            <img
+              className="h-[56pxpx] w-[126px] md:h-[62px] md:w-[135px]"
+              src="./fragrance-foundation.png"
+              alt=""
+            />
+          </div>
+          <div className="p-6">
+            <img
+              className="h-[56pxpx] w-[126px] md:w-[135px]"
+              src="./gq.png"
+              alt=""
+            />
+          </div>
+          <div className="p-6">
+            <img
+              className="h-[56pxpx] w-[126px] md:w-[135px]"
+              src="./vogue.png"
+              alt=""
+            />
+          </div>
+          <div className="p-6">
+            <img
+              className="h-[56pxpx] w-[126px] md:w-[135px]"
+              src="./well.png"
+              alt=""
+            />
+          </div>
         </div>
 
-        <div id="oil-image" className="overflow-hidden h-[574px]  lg:h-[484px] relative flex flex-col justify-end items-center ">
-          <img className=" ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105" src={"./images/oil-image.jpeg"} alt="" />
+        <div
+          id="oil-image"
+          className="overflow-hidden h-[574px]  lg:h-[484px] relative flex flex-col justify-end items-center "
+        >
+          <img
+            className=" ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105"
+            src={"./images/oil-image.jpeg"}
+            alt=""
+          />
           <a
-              href=""
-              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
-            >
-              Shop Now
-            </a>
+            href=""
+            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+          >
+            Shop Now
+          </a>
         </div>
 
-        <div id="gift-image" className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center border-y-[1px] border-black">
-          <img className="ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105" src={"./images/giftsets.png"} alt="" />
+        <div
+          id="gift-image"
+          className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center border-y-[1px] border-black"
+        >
+          <img
+            className="ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105"
+            src={"./images/giftsets.png"}
+            alt=""
+          />
           <a
-              href=""
-              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
-            >
-              Shop Now
-            </a>
+            href=""
+            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+          >
+            Shop Now
+          </a>
         </div>
-
       </div>
     </>
   );
