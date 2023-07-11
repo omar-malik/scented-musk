@@ -5,14 +5,13 @@ import SearchOpen from "../../assets/SearchOpen";
 import MenuOpen from "../../assets/MenuOpen";
 import NavbarChevron from "../../assets/NavbarChevron";
 import { useState } from "react";
-import { useAtom } from "jotai";
-import { cart } from "../../Atoms.js";
+
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [open, setOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [cartStore, setCartStore] = useAtom(cart);
+
   const links = [
     {
       name: "FRAGRANCE",
@@ -97,7 +96,7 @@ function Navbar() {
       {open !== false && (
         <div
           id="navbar-fragrance-dropdown"
-          className="bg-white w-full h-[550px] flex flex-col p-7"
+          className="bg-white absolute m-[110px] w-full z-50 h-[550px] flex flex-col p-7"
         >
           {open.menu &&
             open.menu.map((link, i) => {

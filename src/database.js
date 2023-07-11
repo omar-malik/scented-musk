@@ -13,7 +13,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/abid-ambre.png"]
+    image: "./images/abid-ambre.png"
 
   },
   {
@@ -30,7 +30,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/arabian-nights.webp"]
+    image: "./images/arabian-nights.webp"
 
   },
   {
@@ -47,7 +47,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/black-rose.webp"]
+    image: "./images/black-rose.webp"
 
   },
   {
@@ -64,7 +64,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/blue-eyes.webp"]
+    image: "./images/blue-eyes.webp"
 
   },
   {
@@ -81,7 +81,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/egyptian-musk.webp"]
+    image: "./images/egyptian-musk.webp"
 
   },
   {
@@ -98,7 +98,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/emirates.webp"]
+    image: "./images/emirates.webp"
 
   }, {
     key: 7,
@@ -114,7 +114,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/enigma.webp"]
+    image: "./images/enigma.webp"
 
   },
   {
@@ -131,7 +131,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/evanto.webp"]
+    image: "./images/evanto.webp"
 
   },
   {
@@ -148,7 +148,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    images: ["./images/golden-dust.webp"]
+    image: "./images/golden-dust.webp"
 
   }
 ]
