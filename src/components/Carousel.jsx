@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ProductCarousel from "./ProductCarousel";
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -97,6 +98,9 @@ const Carousel = ({ images }) => {
           >
             Shop Now
           </a>
+        </div>
+        <div className="flex flex-row align-middle justify-center">
+        <ProductCarousel></ProductCarousel>
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:2,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -25,7 +25,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:3,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -42,7 +42,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:2,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -59,7 +59,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:2,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -76,7 +76,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:1,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -86,14 +86,14 @@ export const products = [
   },
   {
     key: 6,
-    name:"Emirates",
+    name:"EMIRATES",
     price:{
       "10ml": 21,
       "15ml": 30,
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:3,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -109,7 +109,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:2,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
@@ -143,7 +143,7 @@ export const products = [
       "30ml": 55,
       "50ml": 80
     },
-    intensity:4,
+    intensity:2,
     description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
