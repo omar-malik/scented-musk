@@ -31,7 +31,7 @@ const ProductCarousel = () => {
                     <div className=" font-medium tracking-[1px]">{product.name}</div>
                     <div className="font-light">Intensity {product.intensity}</div>
                     <div className="text-sm text-gray-500">
-                      £{product.price["10ml"]} - £{product.price["50ml"]}
+                      £{product.price["10ml"].toFixed(2)} - £{product.price["50ml"].toFixed(2)}
                     </div>
                   </div>
                 </SwiperSlide>
