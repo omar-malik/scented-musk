@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductCarousel from "./ProductCarousel";
+import { Link } from "react-router-dom"
+
 
 const Carousel = ({ images }) => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -26,12 +28,12 @@ const Carousel = ({ images }) => {
           <div className=" flex flex-col items-center">
             <div className="font-light tracking-[1px]">PREMIUM FRAGRANCES</div>
             <div className="font-thin text-sm p-2">DISCOVER YOUR SCENT</div>
-            <a
-              href=""
+            <Link
+              to="/products"
               className="hover:bg-gold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
             >
               Shop Now
-            </a>
+            </Link>
           </div>
         </div>
 
