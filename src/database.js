@@ -13,7 +13,7 @@ export const products = [
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
-    image: "./images/abid-ambre.png"
+    image: "./images/abid-ambre.webp"
 
   },
   {
