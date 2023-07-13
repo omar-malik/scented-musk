@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 const ProductCarousel = () => {
   return (
     <>
-      <div className="h-[642px] w-[542px]">
+      <div className="p-5 h-full w-full max-w-[1020px]">
         <div className="h-20 w-full flex flex-col items-center justify-center tracking-[2px] font-light text-lg">
           <div className="">EXPLORE EVOCATIVE SCENTS</div>
         </div>
@@ -19,7 +19,19 @@ const ProductCarousel = () => {
           navigation={true}
           pagination={{ clickable: true }}
           slidesPerView={1}
-          spaceBetween={0}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            }
+ 
+          }}
+        
+          spaceBetween={20}
           className="h-full w-full"
         >
           {products.map((product, i) => {
@@ -30,7 +42,7 @@ const ProductCarousel = () => {
                     <img className="border-[1px]" src={product.image} alt="" />
                     <div className=" font-medium tracking-[1px]">{product.name}</div>
                     <div className="font-light">Intensity {product.intensity}</div>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-sm text-gray-500 sm:h-16">
                       £{product.price["10ml"].toFixed(2)} - £{product.price["50ml"].toFixed(2)}
                     </div>
                   </div>

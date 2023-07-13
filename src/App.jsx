@@ -1,12 +1,14 @@
 import "./App.css";
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ProductsPage from "./pages/ProductsPage";
+import { BrowserRouter as Router, Routes, Route, Link, } from "react-router-dom";
+import HomePage from "./pages/Home";
+import ProductsPage from "./pages/Products";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
     <>
+    <Navbar></Navbar>
       <Router>
         <div className="App">
           <Routes>
