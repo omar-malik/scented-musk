@@ -77,12 +77,12 @@ const Carousel = ({ images }) => {
             src={"./images/oil-image.jpeg"}
             alt=""
           />
-          <a
-            href=""
+          <Link
+            to="/products"
             className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
           >
             Shop Now
-          </a>
+          </Link>
         </div>
 
         <div
@@ -94,12 +94,12 @@ const Carousel = ({ images }) => {
             src={"./images/giftsets.png"}
             alt=""
           />
-          <a
-            href=""
+          <Link
+            href="/products"
             className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
           >
             Shop Now
-          </a>
+          </Link>
         </div>
         <div className="flex flex-row align-middle justify-center">
         <ProductCarousel></ProductCarousel>

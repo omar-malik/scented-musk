@@ -5,6 +5,7 @@ import SearchOpen from "../../assets/SearchOpen";
 import MenuOpen from "../../assets/MenuOpen";
 import NavbarChevron from "../../assets/NavbarChevron";
 import { useState } from "react";
+import {  Link } from "react-router-dom";
 
 
 function Navbar() {
@@ -51,14 +52,14 @@ function Navbar() {
           </div>
 
           <div className=" absolute left-1/2 -translate-x-1/2 ">
-            <a className="" href="/">
+            <Link  to="/">
               <div className="text-3xl text-gold font-light tracking-wide">
                 SCENTEDMUSK
               </div>
               <div className="text-[10px] text-gold font-normal pl-[72px] ml-3">
                 L O N D O N
               </div>
-            </a>
+            </Link>
           </div>
 
           <div className="flex space-x-4 p-2 pt-3 lg:pr-10">
