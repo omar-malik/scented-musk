@@ -3,7 +3,7 @@ import { products } from "../database";
 const ProductsPage = () => {
   return (
     <>
-    
+    <div className="h-20"></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center w-full h-full">
         {products.map((product, i) => {
           return (

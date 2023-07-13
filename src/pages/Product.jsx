@@ -5,7 +5,7 @@ const Product = () => {
     <div>
       {
         products.map(product => {
-          product.
+          
         })
       }
     </div>
