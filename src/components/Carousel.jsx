@@ -95,7 +95,7 @@ const Carousel = ({ images }) => {
             alt=""
           />
           <Link
-            href="/products"
+            to="/products"
             className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
           >
             Shop Now
