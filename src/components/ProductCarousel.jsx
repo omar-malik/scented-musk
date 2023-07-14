@@ -4,7 +4,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const ProductCarousel = () => {
   return (
@@ -27,26 +27,35 @@ const ProductCarousel = () => {
 
             768: {
               slidesPerView: 3,
-              spaceBetween: 20
-            }
- 
+              spaceBetween: 20,
+            },
           }}
-        
           spaceBetween={20}
           className="h-full w-full"
         >
           {products.map((product, i) => {
             return (
-              <div key={i} className="h-full w-full">
+              <div key={i} className="h-full w-full ">
                 <SwiperSlide className="">
                   <div className="space-y-1 font-light ">
-<Link>
-<img className="border-[1px]" src={product.image} alt="" />
-                    <div className=" font-medium tracking-[1px]">{product.name}</div>
-</Link>
-                    <div className="font-light">Intensity {product.intensity}</div>
-                    <div className="text-sm text-gray-500 sm:h-16">
-                      £{product.price["10ml"].toFixed(2)} - £{product.price["50ml"].toFixed(2)}
+                    <Link className="space-y-2">
+                      <img
+                        className="border-[1px] hover:bg-gray-100 transition duration-300"
+                        src={product.image}
+                        alt=""
+                      />
+                      <div className=" font-medium tracking-[1px]">
+                        {product.name}
+                      </div>
+                    </Link>
+                    <div className="space-y-2">
+                      <div className="font-light ">
+                        Intensity {product.intensity}
+                      </div>
+                      <div className="text-sm text-gray-500 sm:h-16">
+                        £{product.price["10ml"].toFixed(2)} - £
+                        {product.price["50ml"].toFixed(2)}
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>

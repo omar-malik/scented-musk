@@ -15,7 +15,7 @@ const ProductsPage = () => {
               <div className="  font-light ">
                 <Link className="space-y-1">
                   <img
-                    className="border-[1px] hover:bg-gray-100 sm:hover:bg-gray-100 transition duration-500"
+                    className="border-[1px] hover:bg-gray-100 transition duration-500"
                     src={product.image}
                     alt=""
                   />
