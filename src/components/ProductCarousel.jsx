@@ -38,7 +38,7 @@ const ProductCarousel = () => {
               <div key={i} className="h-full w-full ">
                 <SwiperSlide className="">
                   <div className="space-y-1 font-light ">
-                    <Link className="space-y-2">
+                    <Link to="/product" className="space-y-2">
                       <img
                         className="border-[1px] hover:bg-gray-100 transition duration-300"
                         src={product.image}
