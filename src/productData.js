@@ -1,4 +1,4 @@
-export const products = {
+export const productData = {
   "1": {
     name: "ABID AMBRE OIL",
     price: {
