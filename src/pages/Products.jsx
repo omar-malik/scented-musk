@@ -13,7 +13,7 @@ const ProductsPage = () => {
               className="items-center justify-center p-3 h-full w-full"
             >
               <div className="  font-light ">
-                <Link to="/proct" className="space-y-1">
+                <Link to="/product" className="space-y-1">
                   <img
                     className="border-[1px] hover:bg-gray-100 transition duration-500"
                     src={product.image}
