@@ -1,0 +1,23 @@
+[
+  {
+    "name": "FRAGRANCE",
+    "sublinks": ["All Perfume Oils", "Mens Perfume Oils", "Women's Perfume Oils"]
+  },
+  {
+    "name": "COLLECTION",
+    "sublinks": []
+  },
+  {
+    "name": "GIFTS",
+    "sublinks": ["Gift sets for him", "Gift sets for her", "Candles"]
+  },
+  {
+    "name": "HOME FRAGRANCE",
+    "sublinks": ["Shop Bakhoor", "Bakhoor Burners", "Candles"]
+  },
+  {
+    "name": "BESPOKE FRAGRANCE",
+    "sublinks": []
+  }
+ 
+]

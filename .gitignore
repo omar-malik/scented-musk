@@ -1,0 +1,14 @@
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+.pnpm
+yarn.lock
+
+# Ignore build artifacts and development files
+/dist
+/build
+/.cache
+
+# Ignore Tailwind CSS generated files
+.css
+.tmp
