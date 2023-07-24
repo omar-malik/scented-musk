@@ -3,11 +3,11 @@ const Footer = () => {
     <div>
       <div className="z-[200]  flex flex-col  bottom-0 h-[365px] bg-black text-gold">
         <div className="p-3">
-          Images found on{" "}
-          <a className=" hover:bg-slate-700 underline-offset-2 transition duration-500 rounded-md" href="https://www.freepik.com/free-photo/healthy-argan-oil-arrangement_14959159.htm#from_view=detail_serie#position=6">
+          Images found on{""}
+          <a className="p-1 hover:bg-slate-700 underline hover:underline-offset-2 transition duration-500 rounded-md" href="https://www.freepik.com/free-photo/healthy-argan-oil-arrangement_14959159.htm#from_view=detail_serie#position=6">
             Freepik.com
           </a>
-          {" "} by artists:
+          {""}by artists:
         </div>
 
 

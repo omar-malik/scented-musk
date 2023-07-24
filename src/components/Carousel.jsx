@@ -76,7 +76,7 @@ const Carousel = ({ images }) => {
           className="overflow-hidden h-[574px] lg:h-[484px] relative flex flex-col border-t-[1px] border-black justify-end items-center "
         >
           <img
-            className=" ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105"
+            className=" ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-110"
             src={"./images/pink.png"}
             alt=""
           />
@@ -93,7 +93,7 @@ const Carousel = ({ images }) => {
           className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center border-y-[1px] border-black"
         >
           <img
-            className="ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-105"
+            className="ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-110"
             src={"./images/oil-image.png"}
             alt=""
           />
