@@ -12,7 +12,7 @@ const Footer = () => {
 
 
       </div>
-      <div className="bg-gray-100 border-[1px] h-[42px] flex justify-center items-center">Exellent rated by - peers and myself :) </div>
+      <div className="bg-gray-100 border-[1px] h-[42px] flex justify-center items-center">Excellent rated by - peers and myself :) </div>
 
       <div className="h-[270px] flex flex-col justify-between ">
         <p>NEED HELP</p>
