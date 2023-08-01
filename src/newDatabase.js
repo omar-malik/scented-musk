@@ -113,7 +113,7 @@ export const products = [
   },
   {
     key:"8",
-    name: "Evanto",
+    name: "EVANTO",
     price: {
       "10ml": 21,
       "15ml": 30,

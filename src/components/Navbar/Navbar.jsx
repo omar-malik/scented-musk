@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex flex-col fixed top-0 z-50 w-full items-center bg-white">
+      <div className="flex flex-col fixed top-0 z-50 w-full items-center bg-white ">
         <div className="grid grid-cols-3 items-center w-full h-[70px] p-2">
           <button className="md:invisible md:pointer-events-none flex justify-start h-8 w-8">
             <MenuOpen></MenuOpen>
