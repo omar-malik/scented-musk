@@ -9,7 +9,7 @@ export const productData = {
       "50ml": 80
     },
     intensity: 2,
-    description: "The fragrance that keeps you in touch with the Earth. The leather and woody notes with vetiver flavour are perfect to add to your mystery.",
+    description: "Get showered with compliments with this invigorating blend of floral, woody, and citrusy aromas. There's nothing more powerful than announcing your arrival with your scent.",
     base: "Amber, Cambodian Oud",
     heart: "Vetiver",
     top: "Rose, Saffron",
