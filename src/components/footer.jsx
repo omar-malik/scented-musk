@@ -18,35 +18,34 @@ const Footer = () => {
             {""}by artists:
           </p>
           <div className="mt-[-30px] flex flex-row justify-between w-[300px] text-gold">
-          <a className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md" href="https://www.freepik.com/author/xvector">xvector on freepik</a>
-          <a className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md" href="https://www.freepik.com/author/vecstock">vecstock on freepik</a>
+            <a
+              className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
+              href="https://www.freepik.com/author/xvector"
+            >
+              xvector on freepik
+            </a>
+            <a
+              className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
+              href="https://www.freepik.com/author/vecstock"
+            >
+              vecstock on freepik
+            </a>
           </div>
 
-          <p className="flex flex-row">
-            <Truck />{" "}
-            <div className="pl-2">
-              No DELIVERY since you can't order anything!
-            </div>
+          <p className="flex font-light text-sm flex-row">
+            <Truck /> <div className="pl-2">DELIVERY</div>
           </p>
 
-          <p className="flex flex-row">
-            <Payment />{" "}
-            <div className="pl-2">SAFE PAYMENT since you pay nothing!</div>
+          <p className="flex font-light text-sm flex-row">
+            <Payment /> <div className="pl-2">SAFE AND SECURE</div>
           </p>
 
-          <p className="flex flex-row">
-            <Returns />{" "}
-            <div className="pl-2">
-              EASY RETURNS
-            </div>
+          <p className="flex font-light text-sm flex-row">
+            <Returns /> <div className="pl-2">RETURNS</div>
           </p>
 
-          <p className="flex flex-row ">
-            <Delivery />{" "}
-            <div className="pl-2">
-              INTERNATIONAL THEORETICAL DELIVERY - We deliver just as much
-              worldwide as we do in the UK
-            </div>
+          <p className="flex font-light text-sm flex-row ">
+            <Delivery /> <div className="pl-2">INTERNATIONAL</div>
           </p>
         </div>
       </div>
