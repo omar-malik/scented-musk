@@ -7,9 +7,10 @@ const Product = () => {
 
   console.log(productData[productId]);
   return (
-    <div className="flex flex-col justify-content p-4 relative pt-[100px] bg-gray-300">
-      <div>
-        <img className="h=[full] w-[full]" src={currentProduct.image} alt="" />
+<div className="w-full flex flex-row items-center justify-center ">
+<div className="flex flex-col md:flex-row max-w-[1020px] right-0 justify-center p-4 relative pt-[100px] bg-gray-200">
+      <div className="pr-5">
+        <img className="h-full w-full" src={currentProduct.image} alt="" />
       </div>
 
       <div className="flex flex-col gap-3 pt-3">
@@ -23,6 +24,7 @@ const Product = () => {
       </div>
 
     </div>
+</div>
   );
 };
 
