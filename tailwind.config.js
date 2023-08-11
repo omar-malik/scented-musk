@@ -10,7 +10,7 @@ export default {
     extend: {
       colors: {
         'gold': '#a28557',
-      }
+      },
     },
   },
   plugins: [],

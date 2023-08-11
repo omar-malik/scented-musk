@@ -13,7 +13,14 @@ const images = [
     <div className="bg-gray-100 h-full flex flex-col items-center">
       <Carousel images={images} />
 <ProductCarousel></ProductCarousel>
-      
+     <div className="flex flex-col gap-3 bg-gray-200 p-5 w-full h-[180px]">
+      <p className="text-xl w-[240px]">
+        EXPLORE OUR LUXURY PERFUME COLLECTIONS
+      </p>
+      <p>
+      Experiencing our fragrances just got easier! Try our scents from our new collection.
+      </p>
+      </div> 
     </div>
   );
 }
