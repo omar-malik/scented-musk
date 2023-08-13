@@ -1,5 +1,4 @@
 import Carousel from "../components/Carousel";
-import Footer from "../components/footer";
 import image1 from "../assets/images/table.png"
 import image2 from "../assets/images/green-background.png"
 import ProductCarousel from "../components/ProductCarousel"
@@ -14,7 +13,7 @@ const images = [
       <Carousel images={images} />
 <ProductCarousel></ProductCarousel>
      <div className="flex flex-col gap-3 bg-gray-200 p-5 w-full h-[180px]">
-      <p className="text-xl w-[240px]">
+      <p className="text-xl font-[quicksand] w-[240px]">
         EXPLORE OUR LUXURY PERFUME COLLECTIONS
       </p>
       <p>
