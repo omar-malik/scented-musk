@@ -73,7 +73,7 @@ const Carousel = ({ images }) => {
 
         <div
           id="oil-image"
-          className="overflow-hidden h-[574px] lg:h-[484px] relative flex flex-col border-t-[1px] border-black justify-end items-center "
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col border-t-[1px] border-black justify-end items-center "
         >
           <img
             className=" ease-in-out object-cover object-left h-full w-full transition duration-500 transform hover:scale-110"
@@ -90,7 +90,7 @@ const Carousel = ({ images }) => {
 
         <div
           id="gift-image"
-          className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center border-y-[1px] border-black"
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col justify-end items-center border-y-[1px] border-black"
         >
           <img
             className="ease-in-out object-cover object-right h-full w-full transition duration-500 transform hover:scale-110"
