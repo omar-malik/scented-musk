@@ -23,41 +23,43 @@ function HomePage() {
             </p>
           </div>
         </div>
-      <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] font-[quicksand]">
-      <div
-          id="oil-image"
-          className="overflow-hidden h-[574px] lg:h-[484px] relative flex flex-col justify-end items-center"
-        >
-          <img
-            className="ease-in-out object-cover object-left h-full w-full transition duration-[450ms] transform hover:scale-110"
-            src={"./images/pink.png"}
-            alt=""
-          />
-          <Link
-            to="/products"
-            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-black text-sm text-white p-2 pl-10 pr-10 rounded-full"
+        <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] items-center ">
+          <div
+            id="oil-image"
+            className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
           >
-            SHOP NOW
-          </Link>
-        </div>
+            <img
+              className="ease-in-out object-cover object-left h-full w-full transition duration-[450ms] transform hover:scale-110"
+              src={"./images/pink.png"}
+              alt=""
+            />
+            <p className="text-3xl font-[quicksand] absolute top-0">ROSES, LIGHT AND BEAUTY</p>
+            <Link
+              to="/products"
+              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-black text-sm text-white p-2 pl-10 pr-10 rounded-full"
+            >
+              SHOP NOW
+            </Link>
+          </div>
 
-        <div
-          id="gift-image"
-          className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center"
-        >
-          <img
-            className="ease-in-out object-cover object-right h-full w-full transition duration-[450ms] transform hover:scale-110"
-            src={"./images/oil-image.png"}
-            alt=""
-          />
-          <Link
-            to="/products"
-            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+          <div
+            id="gift-image"
+            className="overflow-hidden h-[574px] md:h-[280px] lg:-h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
           >
-            SHOP NOW
-          </Link>
+            <img
+              className="ease-in-out object-cover object-right h-full w-full transition duration-[450ms] transform hover:scale-110"
+              src={"./images/oil-image.png"}
+              alt=""
+            />
+            <p className="text-white text-2xl font-[quicksand] absolute top-0">MAKE IT SMELL LIKE HOME</p>
+            <Link
+              to="/products"
+              className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+            >
+              SHOP NOW
+            </Link>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
