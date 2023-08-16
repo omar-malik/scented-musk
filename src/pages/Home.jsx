@@ -23,21 +23,21 @@ function HomePage() {
             </p>
           </div>
         </div>
-      <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px]">
+      <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] font-[quicksand]">
       <div
           id="oil-image"
           className="overflow-hidden h-[574px] lg:h-[484px] relative flex flex-col justify-end items-center"
         >
           <img
-            className=" ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-110"
+            className="ease-in-out object-cover object-left h-full w-full transition duration-[450ms] transform hover:scale-110"
             src={"./images/pink.png"}
             alt=""
           />
           <Link
             to="/products"
-            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-black text-sm text-white p-2 pl-10 pr-10 rounded-full"
           >
-            Shop Now
+            SHOP NOW
           </Link>
         </div>
 
@@ -46,7 +46,7 @@ function HomePage() {
           className="overflow-hidden h-[574px] relative flex flex-col justify-end items-center"
         >
           <img
-            className="ease-in-out object-cover h-full w-full transition duration-500 transform hover:scale-110"
+            className="ease-in-out object-cover object-right h-full w-full transition duration-[450ms] transform hover:scale-110"
             src={"./images/oil-image.png"}
             alt=""
           />
@@ -54,7 +54,7 @@ function HomePage() {
             to="/products"
             className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
           >
-            Shop Now
+            SHOP NOW
           </Link>
         </div>
       </div>
