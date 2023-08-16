@@ -25,8 +25,12 @@ const ProductCarousel = () => {
             },
 
             768: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1020: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
           }}
           spaceBetween={20}
