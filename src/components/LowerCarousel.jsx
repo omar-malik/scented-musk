@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LowerCarousel = () => {
   return (
-    <div className="w-full">
+    <div className="w-full mb-[-40px]">
       <div className="w-full h-[283px] bg-neutral-200">
         <div className="flex flex-col sm:flex-row lg:gap-[230px] sm:items-center justify-center gap-2 bg-neutral-200 p-5 w-full h-[200px]">
           <p className="text-xl md:font-light md:text-3xl sm:w-[300px] md:w-[450px] font-[quicksand] w-[240px]">
