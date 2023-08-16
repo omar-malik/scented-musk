@@ -5,8 +5,8 @@ import Payment from "../assets/Payment";
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col h-[365px] bg-black text-white font-[quicksand]">
-        <div className="p-6 flex h-[350px] flex-col justify-between">
+      <div className="flex flex-col h-[365px] bg-black text-white tracking-wide font-[quicksand]">
+        <div className="p-8 mt-2 flex h-[350px] flex-col justify-between">
           <p className="">
             Images found on{""}
             <a
@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
             {""}by artists:
           </p>
-          <div className="mt-[-30px] flex flex-row justify-between w-[300px] text-gold">
+          <div className="mt-[-30px] flex flex-row justify-between w-[350px] text-gold">
             <a
               className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
               href="https://www.freepik.com/author/xvector"
