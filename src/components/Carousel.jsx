@@ -29,7 +29,9 @@ const Carousel = ({ images }) => {
               <div className="font-light md:text-[23px] md:tracking-widest tracking-[1px]">
                 PREMIUM FRAGRANCES
               </div>
-              <div className="font-thin md:text-[14px] md:tracking-widest text-sm p-2 md:pl-0">DISCOVER YOUR SCENT</div>
+              <div className="font-thin md:text-[14px] md:tracking-widest text-sm p-2 md:pl-0">
+                DISCOVER YOUR SCENT
+              </div>
               <Link
                 to="/products"
                 className="hover:bg-gold w-[148px] hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
@@ -73,36 +75,42 @@ const Carousel = ({ images }) => {
 
         <div
           id="oil-image"
-          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col border-t-[0.5px] border-black justify-end items-center "
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col border-t-[0.5px] border-black justify-end items-center font-[quicksand]"
         >
           <img
             className=" ease-in-out object-cover object-left h-full w-full transition duration-500 transform hover:scale-110"
             src={"./images/pink.png"}
             alt=""
           />
-          <Link
-            to="/products"
-            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
-          >
-            Shop Now
-          </Link>
+          <div className="flex flex-col items-center p-6 gap-2 absolute">
+            <p className="text-white font-light">OILS</p>
+            <Link
+              to="/products"
+              className=" hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
+            >
+              SHOP NOW
+            </Link>
+          </div>
         </div>
 
         <div
           id="gift-image"
-          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col justify-end items-center border-y-[0.5px] border-black"
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col justify-end items-center border-y-[0.5px] border-black font-[quicksand]"
         >
           <img
             className="ease-in-out object-cover object-right h-full w-full transition duration-500 transform hover:scale-110"
             src={"./images/oil-image.png"}
             alt=""
           />
-          <Link
-            to="/products"
-            className="absolute z-30 mb-8 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
-          >
-            Shop Now
-          </Link>
+          <div className="flex flex-col items-center p-6 gap-2 absolute">
+            <p className="text-white font-light">GIFTS</p>
+            <Link
+              to="/products"
+              className=" hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
+            >
+              SHOP NOW
+            </Link>
+          </div>
         </div>
       </div>
     </>
