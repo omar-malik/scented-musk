@@ -5,7 +5,7 @@ import Payment from "../assets/Payment";
 const Footer = () => {
   return (
     <div>
-      <div className="  flex flex-col h-[365px] bg-black text-white">
+      <div className="flex flex-col h-[365px] bg-black text-white font-[quicksand]">
         <div className="p-6 flex h-[350px] flex-col justify-between">
           <p className="">
             Images found on{""}
