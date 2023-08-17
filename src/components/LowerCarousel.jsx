@@ -14,9 +14,9 @@ const LowerCarousel = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] items-center ">
+      <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] items-center">
         <div
-          id="oil-image"
+          id="pink-image"
           className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
         >
           <img
@@ -24,12 +24,12 @@ const LowerCarousel = () => {
             src={"./images/pink.png"}
             alt=""
           />
-          <div className="flex flex-col p-5 gap-1 justify-center items-center absolute">
-            <p className="text-black tracking-widest font-[quicksand]">
-              MAKE IT SMELL LIKE HOME
+          <div className="flex flex-col items-center absolute h-full w-full p-4 gap-1 md:gap-3 justify-end md:items-end md:justify-center">
+            <p className="text-black md:text-3xl tracking-widest font-[quicksand]">
+              LIGHT, FRESH, BEAUTIFUL 
             </p>
-            <p className="text-black text-sm tracking-wide font-light">
-              EXPERIENCE FRESHNESS
+            <p className="text-black text-sm md:text-[15px] tracking-wide pb-1 md:pb-2 font-light">
+              FIND YOUR SIGNATURE
             </p>
             <Link
               to="/products"
@@ -41,19 +41,19 @@ const LowerCarousel = () => {
         </div>
 
         <div
-          id="gift-image"
-          className="overflow-hidden h-[574px] md:h-[280px] lg:-h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
+          id="oil-image"
+          className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
         >
           <img
             className="ease-in-out object-cover object-right h-full w-full transition duration-[450ms] transform hover:scale-110"
             src={"./images/oil-image.png"}
             alt=""
           />
-          <div className="flex flex-col p-8 gap-1 justify-center items-center absolute">
-            <p className="text-white tracking-widest font-[quicksand]">
+          <div className="flex flex-col absolute p-8 gap-1 md:gap-2 justify-end h-full w-full items-center md:items-end md:justify-center ">
+            <p className="text-white md:text-3xl tracking-widest font-[quicksand]">
               MAKE IT SMELL LIKE HOME
             </p>
-            <p className="text-white text-sm tracking-wide font-light">
+            <p className="text-white text-sm md:text-[15px] pb-1 md:pb-2 tracking-wide font-light">
               EXPERIENCE FRESHNESS
             </p>
             <Link
