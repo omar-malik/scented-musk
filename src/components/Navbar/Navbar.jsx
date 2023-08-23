@@ -65,6 +65,7 @@ console.log(filteredProducts)
                     to={`product/${result.id}`}
                     className="flex flex-row items-center h-20 border-[0.5px] w-full"
                     key={result.name}
+                    onClick={() => setSearchOpen(false)}
                   >
                     <img className="p-3 h-20 w-20" src={result.image} alt="" />
                     <div className="flex flex-col font-[quicksand]">
