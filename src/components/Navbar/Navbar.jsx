@@ -21,7 +21,12 @@ const Navbar = () => {
 
   const handleSearchButtonClick = () => {
     const filteredResults = Object.values(productData).filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      product.top.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      product.heart.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      product.base.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      product.description.toLowerCase().includes(searchQuery.toLowerCase()) 
+
     );
     setSearchResults(filteredResults);
   };
