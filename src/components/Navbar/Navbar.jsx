@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
+    handleSearchButtonClick()
   };
 
   const handleSearchButtonClick = () => {
