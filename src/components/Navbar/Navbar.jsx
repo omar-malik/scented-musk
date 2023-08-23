@@ -1,16 +1,30 @@
 import MenuOpen from "../../assets/MenuOpen";
 import SearchIcon from "../../assets/SearchIcon";
-import SearchClose from "../../assets/SearchClose"
+import SearchClose from "../../assets/SearchClose";
 import ShoppingBasket from "../../assets/ShoppingBasket";
+import EnterSearch from "../EnterSearch";
 import { Link } from "react-router-dom";
 import navbarLinks from "../Navbar/navbar-links.json";
 import { useState } from "react";
+import { productData } from "../../newProductData";
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   let searchMenu = null;
 
-  
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchButtonClick = () => {
+    const filteredResults = Object.values(productData).filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setSearchResults(filteredResults);
+  };
+
   if (searchOpen) {
     searchMenu = (
       <>
@@ -18,22 +32,41 @@ const Navbar = () => {
           <div className="flex h-[60px] items-center">
             <div className="p-4 w-[300px] tracking-wider">SEARCH OUR SITE</div>
             <button
-                onClick={() => setSearchOpen(false)}
-                className=" hover:rotate-[180deg] duration-[0.3s] m-3"
-              >
-                <SearchClose />
-              </button>
+              onClick={() => setSearchOpen(false)}
+              className=" hover:rotate-[180deg] duration-[0.3s] m-3"
+            >
+              <SearchClose />
+            </button>
           </div>
-          <div className="border-[1px] flex h-[100px] items-center justify-center">
-            <input
-              className="h-10 p-2 focus:placeholder-opacity-0 outline-none border-[1px] font-light text-[12px] placeholder-black w-[280px]"
-              placeholder="Search for Products"
-              type="text"
+          <EnterSearch
+            value={searchQuery}
+            onChange={handleSearchInputChange}
+            onSearch={handleSearchButtonClick}
+          />
 
-            />
+          <div className="bg-white w-full h-full">
+            {searchResults.length > 0 && (
+              <div className="flex flex-col h-full w-full">
+                {searchResults.map((result) => (
+                  <div
+                    className="flex flex-row items-center h-20 border-[0.5px] w-full"
+                    key={result.name}
+                  >
+                    <img className="p-3 h-20 w-20" src={result.image} alt="" />
+                    <div className="flex flex-col font-[quicksand]">
+                      <div className=" text-sm">{result.name}</div>
+                      <div className="text-xs">from £{result.price["10ml"]}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
-        <div onClick={() => setSearchOpen(false)} className="h-screen w-full fixed bg-black z-[99] opacity-50"></div>
+        <div
+          onClick={() => setSearchOpen(false)}
+          className="h-screen w-full fixed bg-black z-[99] opacity-50"
+        ></div>
       </>
     );
   }
