@@ -6,6 +6,7 @@ import EnterSearch from "../EnterSearch";
 import { Link } from "react-router-dom";
 import navbarLinks from "../Navbar/navbar-links.json";
 import { useState } from "react";
+import { useParams } from "react-router-dom"
 import { productData } from "../../newProductData";
 
 const Navbar = () => {
@@ -16,19 +17,25 @@ const Navbar = () => {
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
-    handleSearchButtonClick()
+    handleSearchButtonClick();
   };
 
   const handleSearchButtonClick = () => {
-    const filteredResults = Object.values(productData).filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      product.top.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      product.heart.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      product.base.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()) 
-
+    const filteredResults = Object.entries(productData).filter(
+      ([productId, product]) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.top.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.heart.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.base.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    setSearchResults(filteredResults);
+
+    const filteredProducts = filteredResults.map(([productId, product]) => ({
+      id: productId,
+      ...product,
+    }));
+    setSearchResults(filteredProducts);
+console.log(filteredProducts)
   };
 
   if (searchOpen) {
@@ -54,16 +61,19 @@ const Navbar = () => {
             {searchResults.length > 0 && (
               <div className="flex flex-col h-full w-full">
                 {searchResults.map((result) => (
-                  <div
+                  <Link
+                    to={`product/${result.id}`}
                     className="flex flex-row items-center h-20 border-[0.5px] w-full"
                     key={result.name}
                   >
                     <img className="p-3 h-20 w-20" src={result.image} alt="" />
                     <div className="flex flex-col font-[quicksand]">
                       <div className=" text-sm">{result.name}</div>
-                      <div className="text-xs">from £{result.price["10ml"]}</div>
+                      <div className="text-xs">
+                        from £{result.price["10ml"]}
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}
