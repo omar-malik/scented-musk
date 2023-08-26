@@ -6,7 +6,6 @@ import EnterSearch from "../EnterSearch";
 import { Link } from "react-router-dom";
 import navbarLinks from "../Navbar/navbar-links.json";
 import { useState } from "react";
-import { useParams } from "react-router-dom"
 import { productData } from "../../newProductData";
 
 const Navbar = () => {
@@ -97,8 +96,8 @@ console.log(filteredProducts)
           </button>
 
           <Link to="/" className="text-gold flex flex-col items-center ">
-            <div className="text-[28px] tracking-wider font-light">MISK</div>
-            <div className="text-[10px] font-light tracking-[2px] mt-[-4px]">
+            <div className="text-[28px] tracking-wider font-[quicksand]">SCENTEDMUSK</div>
+            <div className="text-[10px] font-lght tracking-[2px] mt-[-4px]">
               LONDON
             </div>
           </Link>
