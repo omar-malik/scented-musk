@@ -92,21 +92,30 @@ const Navbar = () => {
   if (mobileMenuOpen) {
     mobileMenu = (
       <>
-        <div className="bg-white fixed h-screen flex flex-col left-0 w-[335px] z-[100]">
-          <div className="flex h-[60px] items-center">
-
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              className="absolute right-0 hover:rotate-[180deg] duration-[0.3s] m-3"
-            >
-              <SearchClose />
-            </button>
-          </div>
-        </div>
+        <div className="bg-white fixed h-screen flex flex-col left-0 w-[323px] z-[100]"></div>
         <div
           onClick={() => setMobileMenuOpen(false)}
           className="h-screen w-full fixed bg-black z-[99] opacity-50"
         ></div>
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="absolute bg-black opacity-90 h-12 w-12 text-white flex items-center justify-center z-[101] left-[323px]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
       </>
     );
   }
