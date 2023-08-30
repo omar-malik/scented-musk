@@ -10,9 +10,11 @@ import { productData } from "../../newProductData";
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   let searchMenu = null;
+  let mobileMenu = null;
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -34,7 +36,7 @@ const Navbar = () => {
       ...product,
     }));
     setSearchResults(filteredProducts);
-console.log(filteredProducts)
+    console.log(filteredProducts);
   };
 
   if (searchOpen) {
@@ -87,16 +89,42 @@ console.log(filteredProducts)
     );
   }
 
+  if (mobileMenuOpen) {
+    mobileMenu = (
+      <>
+        <div className="bg-white fixed h-screen flex flex-col left-0 w-[335px] z-[100]">
+          <div className="flex h-[60px] items-center">
+
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute right-0 hover:rotate-[180deg] duration-[0.3s] m-3"
+            >
+              <SearchClose />
+            </button>
+          </div>
+        </div>
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="h-screen w-full fixed bg-black z-[99] opacity-50"
+        ></div>
+      </>
+    );
+  }
   return (
     <>
       <div className="flex flex-col fixed top-0 z-50 w-full items-center bg-white ">
         <div className="grid grid-cols-3 items-center w-full h-[70px] p-2">
-          <button className="md:invisible md:pointer-events-none flex justify-start h-8 w-8">
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="md:invisible md:pointer-events-none flex justify-start h-8 w-8"
+          >
             <MenuOpen></MenuOpen>
           </button>
 
           <Link to="/" className="text-gold flex flex-col items-center ">
-            <div className="text-[28px] tracking-wider font-[quicksand]">SCENTEDMUSK</div>
+            <div className="text-[28px] tracking-wider font-[quicksand]">
+              SCENTEDMUSK
+            </div>
             <div className="text-[10px] font-lght tracking-[2px] mt-[-4px]">
               LONDON
             </div>
@@ -125,6 +153,7 @@ console.log(filteredProducts)
         </div>
       </div>
       <div className="">{searchMenu}</div>
+      <div className="">{mobileMenu}</div>
     </>
   );
 };
