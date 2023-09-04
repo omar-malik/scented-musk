@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className="bg-white w-full h-full">
             {searchResults.length > 0 && (
               <div className="flex flex-col h-full w-full">
-                <div className="pl-5 p-3 text-sm font-[quicksand]">
+                <div className="pl-5 p-3 text-sm font-[quicksand] shadow-md">
                   Search Results:
                 </div>
                 {searchResults.map((result) => (
