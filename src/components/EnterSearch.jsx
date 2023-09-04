@@ -4,7 +4,7 @@ const EnterSearch = ({ value, onChange, onSearch }) => {
   return (
     <>
       <div className="border-[1px] flex h-[100px] w-full items-center justify-center">
-        <div className="flex flex-row border-[1px] w-[300px]">
+        <div className="flex flex-row border-[1px] w-[280px]">
           <input
             className="h-10 p-2 focus:placeholder-opacity-0 outline-none border-[px] font-light text-[12px] placeholder-black w-[270px]"
             placeholder="Search for Products"

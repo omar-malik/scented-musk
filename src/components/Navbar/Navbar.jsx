@@ -42,7 +42,7 @@ const Navbar = () => {
   if (searchOpen) {
     searchMenu = (
       <>
-        <div className="bg-white fixed h-screen flex flex-col right-0 w-[335px] z-[100]">
+        <div className="bg-white fixed h-screen flex flex-col right-0 w-[325px] z-[100]">
           <div className="flex h-[60px] items-center">
             <div className="p-4 w-[300px] tracking-wider">SEARCH OUR SITE</div>
             <button
@@ -61,6 +61,9 @@ const Navbar = () => {
           <div className="bg-white w-full h-full">
             {searchResults.length > 0 && (
               <div className="flex flex-col h-full w-full">
+                <div className="pl-5 p-3 text-sm font-[quicksand]">
+                  Search Results:
+                </div>
                 {searchResults.map((result) => (
                   <Link
                     to={`product/${result.id}`}
