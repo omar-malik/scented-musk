@@ -58,7 +58,7 @@ const Navbar = () => {
             onSearch={handleSearchButtonClick}
           />
 
-          <div className="bg-white w-full h-full">
+          <div className="bg-white w-full h-full overflow-auto">
             {searchResults.length > 0 && (
               <div className="flex flex-col h-full w-full">
                 <div className="pl-5 p-3 text-sm font-[quicksand] shadow-md">
