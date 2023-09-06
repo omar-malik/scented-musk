@@ -57,13 +57,16 @@ const Navbar = () => {
             onChange={handleSearchInputChange}
             onSearch={handleSearchButtonClick}
           />
+          {searchResults.length > 0 && (
+            <div className=" pl-5 p-3 text-sm font-[quicksand] shadow-md">
+            Search Results:
+          </div>
+          )
 
+          }
           <div className="bg-white w-full h-full overflow-y-auto">
             {searchResults.length > 0 && (
               <div className="flex flex-col h-full w-full">
-                <div className=" pl-5 p-3 text-sm font-[quicksand] shadow-md">
-                  Search Results:
-                </div>
                 {searchResults.map((result) => (
                   <Link
                     to={`product/${result.id}`}
@@ -71,7 +74,11 @@ const Navbar = () => {
                     key={result.name}
                     onClick={() => setSearchOpen(false)}
                   >
-                    <img className="p-3 h-full w-28" src={result.image} alt="" />
+                    <img
+                      className="p-3 h-full w-28"
+                      src={result.image}
+                      alt=""
+                    />
                     <div className="flex flex-col font-[quicksand]">
                       <div className=" text-sm">{result.name}</div>
                       <div className="text-xs">
