@@ -20,11 +20,11 @@ const LowerCarousel = () => {
           className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
         >
           <img
-            className="ease-in-out object-cover object-left h-full w-full transition duration-[450ms] transform hover:scale-110"
+            className="ease-in-out object-cover object-left h-full w-full transition duration-[500ms] transform hover:scale-110"
             src={"./images/pink.png"}
             alt=""
           />
-          <div className="flex flex-col items-center absolute h-full w-full p-4 gap-1 md:gap-3 justify-end md:items-end md:justify-center">
+          <div className="flex flex-col items-center absolute h-full w-full pointer-events-none p-4 gap-1 md:gap-3 justify-end md:items-end md:justify-center">
             <p className="text-black md:text-3xl tracking-widest font-[quicksand]">
               LIGHT, FRESH, BEAUTIFUL 
             </p>
@@ -49,7 +49,7 @@ const LowerCarousel = () => {
             src={"./images/oil-image.png"}
             alt=""
           />
-          <div className="flex flex-col absolute p-8 gap-1 md:gap-2 justify-end h-full w-full items-center md:items-end md:justify-center ">
+          <div className="flex flex-col absolute p-8 gap-1 md:gap-2 justify-end h-full w-full pointer-events-none items-center md:items-end md:justify-center ">
             <p className="text-white md:text-3xl tracking-widest font-[quicksand]">
               MAKE IT SMELL LIKE HOME
             </p>
