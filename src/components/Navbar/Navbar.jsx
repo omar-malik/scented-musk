@@ -104,9 +104,11 @@ const Navbar = () => {
         }`}
       ></div>
 
-      <div className={`w-full left-0 h-full absolute z-[101] ease-in-out duration-[50ms] ${
-            mobileMenuOpen ? "-translate-x-0" : "-translate-x-full"
-          }`}>
+      <div
+        className={`w-full left-0 h-full pointer-events-none absolute z-[101] ease-in-out duration-[50ms] ${
+          mobileMenuOpen ? "-translate-x-0" : "-translate-x-full"
+        }`}
+      >
         <div
           onClick={() => setMobileMenuOpen(false)}
           className={`absolute bg-neutral-900 opacity-90 h-12 w-12 text-white flex items-center justify-center z-[101] left-[323px] `}
