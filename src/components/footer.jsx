@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 border-[1px] h-[42px] flex justify-center items-center">
+      <div className="bg-gray-100 border-[1px] h-[42px] text-sm sm:text-[15px] md:text-[16px] flex justify-center items-center">
       <p className="">
             Images found on{""}
             <a
@@ -37,7 +37,7 @@ const Footer = () => {
             </a>
             {""}by artists:
           </p>
-          <div className="mt-[px] flex flex-row p-4 gap-3 text-gold">
+          <div className=" flex flex-row p-4 gap-3 text-gold">
             <a
               className="hover:bg-slate-200 underline hover:underline-offset-2 transition duration-200 rounded-md"
               href="https://www.freepik.com/author/xvector"
