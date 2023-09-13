@@ -6,7 +6,7 @@ const Truck = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6 text-gold"
+      className="w-10 h-10 text-gold"
     >
       <path
         strokeLinecap="round"

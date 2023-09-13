@@ -7,30 +7,6 @@ const Footer = () => {
     <div>
       <div className="flex flex-col h-[365px] bg-black text-white tracking-wide font-[quicksand]">
         <div className="p-8 mt-2 flex h-[350px] flex-col justify-between">
-          <p className="">
-            Images found on{""}
-            <a
-              className="p-1 hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
-              href="https://www.freepik.com/free-photo/healthy-argan-oil-arrangement_14959159.htm#from_view=detail_serie#position=6"
-            >
-              Freepik.com
-            </a>
-            {""}by artists:
-          </p>
-          <div className="mt-[-30px] flex flex-row justify-between w-[350px] text-gold">
-            <a
-              className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
-              href="https://www.freepik.com/author/xvector"
-            >
-              xvector on freepik
-            </a>
-            <a
-              className="hover:bg-slate-700 underline hover:underline-offset-2 transition duration-100 rounded-md"
-              href="https://www.freepik.com/author/vecstock"
-            >
-              vecstock on freepik
-            </a>
-          </div>
 
           <p className="flex font-light text-sm flex-row">
             <Truck /> <div className="pl-2">DELIVERY</div>
@@ -51,13 +27,38 @@ const Footer = () => {
       </div>
 
       <div className="bg-gray-100 border-[1px] h-[42px] flex justify-center items-center">
-        Excellent - rated by - peers and myself :){" "}
+      <p className="">
+            Images found on{""}
+            <a
+              className="p-1 hover:bg-slate-300 underline hover:underline-offset-2 transition duration-200 rounded-md"
+              href="https://www.freepik.com/free-photo/healthy-argan-oil-arrangement_14959159.htm#from_view=detail_serie#position=6"
+            >
+              Freepik.com
+            </a>
+            {""}by artists:
+          </p>
+          <div className="mt-[px] flex flex-row p-4 gap-3 text-gold">
+            <a
+              className="hover:bg-slate-200 underline hover:underline-offset-2 transition duration-200 rounded-md"
+              href="https://www.freepik.com/author/xvector"
+            >
+              xvector on freepik
+            </a>
+            <a
+              className="hover:bg-slate-200 underline hover:underline-offset-2 transition duration-100 rounded-md"
+              href="https://www.freepik.com/author/vecstock"
+            >
+              vecstock on freepik
+            </a>
+          </div>
       </div>
 
-      <div className="h-[270px] p-8 flex flex-col justify-between ">
+      <div className="h-[270px] p-7 pl-4 pb-10 flex flex-col tracking-widest justify-between text-[15px]">
         <p>NEED HELP</p>
-        <p>CONTACT ME</p>
-        <p>MY LINKED IN</p>
+        <p>CONTACT US</p>
+        <p>LEGAL</p>
+        <p>PORTFOLIO</p>
+        <p>LINKED IN</p>
       </div>
     </div>
   );
