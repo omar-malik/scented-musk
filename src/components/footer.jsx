@@ -8,19 +8,19 @@ const Footer = () => {
       <div className="flex flex-col h-[365px] bg-black text-white tracking-wide font-[quicksand]">
         <div className="p-8 mt-2 flex h-[350px] flex-col justify-between">
 
-          <p className="flex font-light text-sm flex-row">
+          <p className="flex items-center font-light text-sm flex-row">
             <Truck /> <div className="pl-2">DELIVERY</div>
           </p>
 
-          <p className="flex font-light text-sm flex-row">
+          <p className="flex items-center font-light text-sm flex-row">
             <Payment /> <div className="pl-2">SAFE AND SECURE</div>
           </p>
 
-          <p className="flex font-light text-sm flex-row">
+          <p className="flex items-center font-light text-sm flex-row">
             <Returns /> <div className="pl-2">RETURNS</div>
           </p>
 
-          <p className="flex font-light text-sm flex-row ">
+          <p className="flex items-center font-light text-sm flex-row ">
             <Delivery /> <div className="pl-2">INTERNATIONAL</div>
           </p>
         </div>
