@@ -17,7 +17,7 @@ const LowerCarousel = () => {
       <div className="flex flex-col gap-3 p-4 w-full relative bottom-[80px] items-center">
         <div
           id="pink-image"
-          className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
+          className="overflow-hidden h-[574px] w-full md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
         >
           <img
             className="ease-in-out object-cover object-left h-full w-full transition duration-[500ms] transform hover:scale-110"
@@ -42,7 +42,7 @@ const LowerCarousel = () => {
 
         <div
           id="oil-image"
-          className="overflow-hidden h-[574px] md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
+          className="overflow-hidden h-[574px] w-full md:h-[280px] lg:h-[374px] max-w-[1170px] relative flex flex-col justify-end items-center"
         >
           <img
             className="ease-in-out object-cover object-right h-full w-full transition duration-[450ms] transform hover:scale-110"
