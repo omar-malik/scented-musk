@@ -17,11 +17,11 @@ const Product = () => {
             {currentProduct.name}
           </div>
           <div className="font-light text-[23px] tracking-wider">From £{currentProduct.price["10ml"].toFixed(2)}</div>
-          <div>Intensity {currentProduct.intensity}</div>
-          <div>{currentProduct.description}</div>
-          <div className="flex flex-col">BASE {currentProduct.base}</div>
-          <div className="flex flex-col">HEART {currentProduct.heart}</div>
-          <div className="flex flex-col">TOP {currentProduct.top}</div>
+          <div className="font-light pt-2 pb-1">Intensity {currentProduct.intensity}</div>
+          <div className="font-light tracking-wide text-sm leading-6">{currentProduct.description}</div>
+          <div className="flex flex-col font-[quicksand]">BASE:<br></br><div className="font-[quicksand] font-">{currentProduct.base}</div></div>
+          <div className="flex flex-col">HEART<br></br>{currentProduct.heart}</div>
+          <div className="flex flex-col">TOP<br></br>{currentProduct.top}</div>
         </div>
       </div>
     </div>
