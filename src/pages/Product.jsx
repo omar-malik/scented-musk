@@ -7,8 +7,8 @@ const Product = () => {
 
   return (
     <div className="w-full flex flex-row items-center justify-center font-[quicksand]">
-      <div className="flex flex-col md:flex-row max-w-[1020px] right-0 justify-center relative pt-[75px] bg-gray-200">
-        <div className="p-3">
+      <div className="flex flex-col md:flex-row max-w-[1200px] right-0 justify-center relative pt-[75px] lg:pt-[120px] bg-gray-200">
+        <div className="p-3 lg:p-8">
           <img className="h-full w-full" src={currentProduct.image} alt="" />
         </div>
 
