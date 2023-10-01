@@ -5,7 +5,7 @@ import Payment from "../assets/Payment";
 const Footer = () => {
   return (
     <div>
-      <div className="flex flex-col h-[365px] bg-black text-white tracking-wide font-[quicksand]">
+      <div className="flex flex-col h-[365px] bg-black text-white tracking-wide font-[quicksand] ">
         <div className="p-8 mt-2 flex h-[350px] flex-col justify-between">
 
           <p className="flex items-center font-light text-sm flex-row">

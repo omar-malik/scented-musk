@@ -153,7 +153,7 @@ const Navbar = () => {
           </button>
 
           <Link to="/" className="text-gold flex flex-col items-center ">
-            <div className="text-[28px] tracking-wider font-[quicksand]">
+            <div className="text-[28px]  font-[quicksand]">
               SCENTEDMUSK
             </div>
             <div className="text-[10px] font-lght tracking-[2px] mt-[-4px]">

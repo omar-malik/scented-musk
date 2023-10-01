@@ -6,22 +6,37 @@ const Product = () => {
   const currentProduct = productData[productId];
 
   return (
-    <div className="w-full flex flex-row items-center justify-center ">
+    <div className="w-full flex flex-row items-center justify-center font-[quicksand]">
       <div className="flex flex-col md:flex-row max-w-[1020px] right-0 justify-center relative pt-[75px] bg-gray-200">
         <div className="p-3">
           <img className="h-full w-full" src={currentProduct.image} alt="" />
         </div>
 
         <div className="flex flex-col gap-3 p-6 ">
-          <div className="font-[quicksand] tracking-wide text-[26px]">
+          <div className=" font-semibold tracking-wide text-[26px]">
             {currentProduct.name}
           </div>
-          <div className="font-light text-[23px] tracking-wider">From £{currentProduct.price["10ml"].toFixed(2)}</div>
-          <div className="font-light pt-2 pb-1">Intensity {currentProduct.intensity}</div>
-          <div className="font-light tracking-wide text-sm leading-6">{currentProduct.description}</div>
-          <div className="flex flex-col font-[quicksand]">BASE:<br></br><div className="font-[quicksand] font-">{currentProduct.base}</div></div>
-          <div className="flex flex-col">HEART<br></br>{currentProduct.heart}</div>
-          <div className="flex flex-col">TOP<br></br>{currentProduct.top}</div>
+          <div className="font  text-[23px] tracking-wider">
+            From £{currentProduct.price["10ml"].toFixed(2)}
+          </div>
+          <div className="font-light pt-2 pb-1">
+            Intensity {currentProduct.intensity}
+          </div>
+          <div className="font-light tracking-wide text-sm leading-6">
+            {currentProduct.description}
+          </div>
+
+          <div className="flex flex-col ">
+            <div>BASE:</div>
+            <div className=" ">{currentProduct.base}</div>
+          </div>
+          <div className="flex flex-col">
+            <div>HEART:</div>
+            {currentProduct.heart}
+          </div>
+          <div className="flex flex-col">
+            <div>TOP:</div> {currentProduct.top}
+          </div>
         </div>
       </div>
     </div>
