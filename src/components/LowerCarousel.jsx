@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const LowerCarousel = () => {
   return (
-    <div className="w-full mb-[-40px]">
+    <div className="w-full mb-[-40px] font-[quicksand]">
       <div className="w-full h-[283px] bg-neutral-200">
         <div className="flex flex-col sm:flex-row lg:gap-[230px] sm:items-center justify-center gap-2 bg-neutral-200 p-5 w-full h-[200px]">
-          <p className="text-xl md:font-light md:text-3xl sm:w-[300px] md:w-[450px] font-[quicksand] w-[240px]">
+          <p className="text-xl font-bold tracking-wider md:text-3xl sm:w-[300px] md:w-[450px] w-[240px]">
             EXPLORE OUR LUXURY PERFUME COLLECTIONS
           </p>
           <p className="font-thin text-sm sm:w-[350px] md:w-[400px] md:text-lg">
@@ -25,15 +25,15 @@ const LowerCarousel = () => {
             alt=""
           />
           <div className="flex flex-col items-center absolute h-full w-full pointer-events-none p-4 gap-1 md:gap-3 justify-end md:items-end md:justify-center">
-            <p className="text-black md:text-3xl tracking-widest font-[quicksand]">
+            <p className="text-black md:text-3xl tracking-widest font-semibold">
               LIGHT, FRESH, BEAUTIFUL 
             </p>
-            <p className="text-black text-sm md:text-[15px] tracking-wide pb-1 md:pb-2 font-light">
+            <p className="text-black text-sm md:text-[15px] tracking-wide pb-1 md:pb-2">
               FIND YOUR SIGNATURE
             </p>
             <Link
               to="/products"
-              className="flex justify-center w-40 z-30 hover:bg-gold transition duration-300 bg-black text-sm text-white p-2 rounded-full"
+              className="flex justify-center w-40 z-30 pointer-events-auto hover:bg-gold transition duration-300 bg-black text-sm text-white p-2 rounded-full"
             >
               SHOP NOW
             </Link>
@@ -50,15 +50,15 @@ const LowerCarousel = () => {
             alt=""
           />
           <div className="flex flex-col absolute p-8 gap-1 md:gap-2 justify-end h-full w-full pointer-events-none items-center md:items-end md:justify-center ">
-            <p className="text-white md:text-3xl tracking-widest font-[quicksand]">
+            <p className="text-white md:text-3xl tracking-widest font-semibold">
               MAKE IT SMELL LIKE HOME
             </p>
-            <p className="text-white text-sm md:text-[15px] pb-1 md:pb-2 tracking-wide font-light">
+            <p className="text-white text-sm md:text-[15px] pb-1 md:pb-2 tracking-wide">
               EXPERIENCE FRESHNESS
             </p>
             <Link
               to="/products"
-              className="flex justify-center w-40 z-30 hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 rounded-full"
+              className="flex justify-center w-40 z-30 pointer-events-auto hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 rounded-full"
             >
               SHOP NOW
             </Link>

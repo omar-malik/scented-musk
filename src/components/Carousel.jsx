@@ -17,16 +17,16 @@ const Carousel = ({ images }) => {
 
   return (
     <>
-      <div className="relative flex flex-col bg-white w-full mt-[70px] lg:mt-[110px]">
+      <div className="relative flex flex-col bg-white w-full mt-[70px] lg:mt-[110px] font-[quicksand]">
         <div className="border-y-[0.5px] border-gray-400">
           <img
             src={images[currentImage]}
             alt="carousel"
-            className="w-full h-[574px] sm:h-[701px] md:h-[500px] lg:h-[644px] object-cover object-right-top md:object-top "
+            className="w-full h-[574px] sm:h-[701px] md:h-[500px] lg:h-[644px] object-cover object-right-top md:object-top"
           />
-          <div className="flex flex-col items-center justify-center absolute z-30 top-[400px] sm:top-[500px] md:top-[180px] md:right-[220px] lg:top-[200px] lg:right-[350px] text-white  w-full p-7 ">
+          <div className="flex flex-col items-center justify-center absolute z-30 top-[400px] sm:top-[500px] md:top-[180px] md:right-[220px] lg:top-[200px] lg:right-[350px] text-white  w-full p-7">
             <div className=" flex flex-col items-center md:items-start">
-              <div className="font-light md:text-[23px] md:tracking-widest tracking-[1px]">
+              <div className="font-regular md:text-[23px] md:tracking-widest tracking-[1px]">
                 PREMIUM FRAGRANCES
               </div>
               <div className="font-thin md:text-[14px] md:tracking-widest text-sm p-2 md:pl-0">
@@ -34,7 +34,7 @@ const Carousel = ({ images }) => {
               </div>
               <Link
                 to="/products"
-                className="hover:bg-gold w-[148px] hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+                className="hover:bg-gold w-[148px] font-semibold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
               >
                 Shop Now
               </Link>
@@ -75,7 +75,7 @@ const Carousel = ({ images }) => {
 
         <div
           id="oil-image"
-          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col border-t-[0.5px] border-gray-400 justify-end items-center font-[quicksand]"
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col border-t-[0.5px] border-gray-400 justify-end items-center "
         >
           <img
             className=" ease-in-out object-cover object-left h-full w-full transition duration-500 transform hover:scale-110"
@@ -83,10 +83,10 @@ const Carousel = ({ images }) => {
             alt=""
           />
           <div className="flex flex-col items-center p-6 gap-2 absolute">
-            <p className="text-white font-light">OILS</p>
+            <p className="text-white">OILS</p>
             <Link
               to="/products"
-              className=" hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
+              className="font-semibold hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
             >
               SHOP NOW
             </Link>
@@ -95,7 +95,7 @@ const Carousel = ({ images }) => {
 
         <div
           id="gift-image"
-          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col justify-end items-center border-y-[0.5px] border-gray-400 font-[quicksand]"
+          className="overflow-hidden h-[574px] md:h-[300px] xl:h-[484px] relative flex flex-col justify-end items-center border-y-[0.5px] border-gray-400"
         >
           <img
             className="ease-in-out object-cover object-right h-full w-full transition duration-500 transform hover:scale-110"
@@ -103,10 +103,10 @@ const Carousel = ({ images }) => {
             alt=""
           />
           <div className="flex flex-col items-center p-6 gap-2 absolute">
-            <p className="text-white font-light">GIFTS</p>
+            <p className="text-white">GIFTS</p>
             <Link
               to="/products"
-              className=" hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
+              className="font-semibold hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2.5 w-40 flex justify-center rounded-full"
             >
               SHOP NOW
             </Link>

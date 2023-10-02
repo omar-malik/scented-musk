@@ -156,7 +156,7 @@ const Navbar = () => {
             <div className="text-[28px]  font-[quicksand]">
               SCENTEDMUSK
             </div>
-            <div className="text-[10px] font-lght tracking-[2px] mt-[-4px]">
+            <div className="text-[10px] font-lght tracking-[4px] mt-[-4px]">
               LONDON
             </div>
           </Link>
