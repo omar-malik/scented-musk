@@ -33,7 +33,7 @@ const LowerCarousel = () => {
             </p>
             <Link
               to="/products"
-              className="flex justify-center w-40 z-30 pointer-events-auto hover:bg-gold transition duration-300 bg-black text-sm text-white p-2 rounded-full"
+              className="flex justify-center w-40 font-semibold z-30 pointer-events-auto hover:bg-gold transition duration-300 bg-black text-sm text-white p-2 rounded-full"
             >
               SHOP NOW
             </Link>
@@ -58,7 +58,7 @@ const LowerCarousel = () => {
             </p>
             <Link
               to="/products"
-              className="flex justify-center w-40 z-30 pointer-events-auto hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 rounded-full"
+              className="flex justify-center font-semibold w-40 z-30 pointer-events-auto hover:bg-gold hover:text-white transition duration-300 bg-white text-sm text-black p-2 rounded-full"
             >
               SHOP NOW
             </Link>
