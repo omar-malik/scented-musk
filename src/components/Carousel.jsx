@@ -26,15 +26,15 @@ const Carousel = ({ images }) => {
           />
           <div className="flex flex-col items-center justify-center absolute z-30 top-[400px] sm:top-[500px] md:top-[180px] md:right-[220px] lg:top-[200px] lg:right-[350px] text-white  w-full p-7">
             <div className=" flex flex-col items-center md:items-start">
-              <div className="font-regular md:text-[23px] md:tracking-widest tracking-[1px]">
+              <div className="font-regular md:text-[26px] md:tracking-widest tracking-[1px] font-semibold">
                 PREMIUM FRAGRANCES
               </div>
-              <div className="font-thin md:text-[14px] md:tracking-widest text-sm p-2 md:pl-0">
+              <div className="font-medium md:text-[16px] md:tracking-widest text-sm p-2 pb-3 md:pl-0">
                 DISCOVER YOUR SCENT
               </div>
               <Link
                 to="/products"
-                className="hover:bg-gold w-[148px] font-semibold hover:text-white transition duration-200 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
+                className="hover:bg-gold w-[148px] font-semibold hover:text-white transition duration-250 bg-white text-sm text-black p-2 pl-10 pr-10 rounded-full"
               >
                 Shop Now
               </Link>

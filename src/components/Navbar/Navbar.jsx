@@ -152,8 +152,8 @@ const Navbar = () => {
             <MenuOpen></MenuOpen>
           </button>
 
-          <Link to="/" className="text-gold flex flex-col items-center ">
-            <div className="text-[28px]  font-[quicksand]">
+          <Link to="/" className="text-gold flex flex-col items-center font-[quicksand]">
+            <div className="text-[28px]">
               SCENTEDMUSK
             </div>
             <div className="text-[10px] font-lght tracking-[4px] mt-[-4px]">
