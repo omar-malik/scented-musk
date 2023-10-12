@@ -10,11 +10,13 @@ import { productData } from "../../newProductData";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
+  const [showBasket, setShowBasket] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   let searchMenu = null;
   let mobileMenu = null;
+  let basket = null;
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -95,6 +97,33 @@ const Navbar = () => {
       )}
     </>
   );
+  basket = (
+    <>
+      <div
+        className={`bg-white fixed h-screen flex flex-col right-0 w-[325px] z-[100] ease-in-out duration-200 ${
+          showBasket ? "translate-x-0 " : "translate-x-full"
+        }`}
+      >
+        <div className="flex h-[60px] items-center border-[1px]">
+          <div className="p-4 w-[300px]">SHOPPING CART</div>
+          <button
+            onClick={() => setShowBasket(false)}
+            className=" hover:rotate-[180deg] duration-[0.3s] m-3"
+          >
+            <SearchClose />
+          </button>
+        </div>
+
+      </div>
+
+      {showBasket && (
+        <div
+          onClick={() => setShowBasket(false)}
+          className={`h-screen w-full fixed bg-black z-[99] opacity-50 `}
+        ></div>
+      )}
+    </>
+  );
 
   mobileMenu = (
     <>
@@ -152,10 +181,11 @@ const Navbar = () => {
             <MenuOpen></MenuOpen>
           </button>
 
-          <Link to="/" className="text-gold flex flex-col items-center font-[quicksand]">
-            <div className="text-[28px]">
-              SCENTEDMUSK
-            </div>
+          <Link
+            to="/"
+            className="text-gold flex flex-col items-center font-[quicksand]"
+          >
+            <div className="text-[28px]">SCENTEDMUSK</div>
             <div className="text-[10px] font-lght tracking-[4px] mt-[-4px]">
               LONDON
             </div>
@@ -168,7 +198,11 @@ const Navbar = () => {
             >
               <SearchIcon></SearchIcon>
             </button>
-            <button className="h-6 w-6 hover:text-gold transition duration-200">
+
+            <button
+              onClick={() => setShowBasket(true)}
+              className="h-6 w-6 hover:text-gold transition duration-200"
+            >
               <ShoppingBasket></ShoppingBasket>
             </button>
           </div>
@@ -185,6 +219,7 @@ const Navbar = () => {
       </div>
       <div className="">{searchMenu}</div>
       <div className="">{mobileMenu}</div>
+      <div className="">{basket}</div>
     </>
   );
 };
