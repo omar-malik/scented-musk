@@ -143,7 +143,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex flex-col fixed top-0 z-50 w-full items-center bg-white ">
+      <div className="flex flex-col fixed top-0 z-50 w-full items-center bg-white">
         <div className="grid grid-cols-3 items-center w-full lg:max-w-[90%] h-[70px] p-2">
           <button
             onClick={() => setMobileMenuOpen(true)}
@@ -161,7 +161,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div className="flex justify-end  h-6 gap-3">
+          <div className="flex justify-end pr-2 h-6 gap-3">
             <button
               onClick={() => setShowSearch(true)}
               className="h-6 w-6 hover:text-gold transition duration-200"
