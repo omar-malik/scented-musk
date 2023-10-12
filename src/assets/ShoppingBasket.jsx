@@ -2,11 +2,6 @@ import { useState } from "react";
 
 function ShoppingBasket({ basketItems, addToBasket, removeFromBasket}) {
 
-  const [basketItems, setBasketItems] = useState([])
-
-  const addToBasket = (product) => {
-    setBasketItems([...basketItems, product])
-  }
 
   return (
         <div className="hover:text-gold transition duration-200">

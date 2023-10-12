@@ -11,9 +11,11 @@ import { productData } from "../../newProductData";
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showBasket, setShowBasket] = useState(false);
+  const [basketItems, setBasketItems] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
   let searchMenu = null;
   let mobileMenu = null;
   let basket = null;
@@ -32,6 +34,10 @@ const Navbar = () => {
         product.base.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
+
+    const addToBasket = (product) => {
+      setBasketItems([...basketItems, product])
+    };
 
     const filteredProducts = filteredResults.map(([productId, product]) => ({
       id: productId,
@@ -97,6 +103,7 @@ const Navbar = () => {
       )}
     </>
   );
+
   basket = (
     <>
       <div
@@ -113,9 +120,11 @@ const Navbar = () => {
             <SearchClose />
           </button>
         </div>
-        <div className="h-full w-full">
-          {}
+
+        <div>
+          basket items displayed here
         </div>
+
       </div>
 
       {showBasket && (
@@ -205,7 +214,10 @@ const Navbar = () => {
               onClick={() => setShowBasket(true)}
               className="h-6 w-6 hover:text-gold transition duration-200"
             >
-              <ShoppingBasket></ShoppingBasket>
+              <ShoppingBasket
+                basketItems={basketItems}
+
+              />
             </button>
           </div>
         </div>

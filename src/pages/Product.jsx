@@ -1,6 +1,6 @@
 import { productData } from "../newProductData";
 import { useParams } from "react-router-dom";
-import ShoppingBasket from "../assets/ShoppingBasket";
+
 
 const Product = () => {
   const productId = `${useParams().productId}`;
