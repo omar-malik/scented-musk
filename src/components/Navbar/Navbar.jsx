@@ -113,7 +113,9 @@ const Navbar = () => {
             <SearchClose />
           </button>
         </div>
-
+        <div className="h-full w-full">
+          {}
+        </div>
       </div>
 
       {showBasket && (

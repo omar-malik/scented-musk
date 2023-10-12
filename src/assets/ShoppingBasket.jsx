@@ -1,4 +1,13 @@
-function ShoppingBasket() {
+import { useState } from "react";
+
+function ShoppingBasket({ basketItems, addToBasket, removeFromBasket}) {
+
+  const [basketItems, setBasketItems] = useState([])
+
+  const addToBasket = (product) => {
+    setBasketItems([...basketItems, product])
+  }
+
   return (
         <div className="hover:text-gold transition duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
