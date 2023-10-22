@@ -7,14 +7,16 @@ import { Link } from "react-router-dom";
 import navbarLinks from "../Navbar/navbar-links.json";
 import { useState } from "react";
 import { productData } from "../../newProductData";
+import { useBasket } from "../../context/BasketContext";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [showBasket, setShowBasket] = useState(false);
-  const [basketItems, setBasketItems] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
+  const { basketItems } = useBasket();
 
   let searchMenu = null;
   let mobileMenu = null;
@@ -35,16 +37,12 @@ const Navbar = () => {
         product.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    const addToBasket = (product) => {
-      setBasketItems([...basketItems, product])
-    };
 
     const filteredProducts = filteredResults.map(([productId, product]) => ({
       id: productId,
       ...product,
     }));
     setSearchResults(filteredProducts);
-    console.log(filteredProducts);
   };
 
   searchMenu = (
@@ -120,9 +118,14 @@ const Navbar = () => {
             <SearchClose />
           </button>
         </div>
-
-        <div>
-          basket items displayed here
+{console.log(basketItems)}
+        <div className="h-full w-full">
+          
+          {basketItems.map((item) => (
+            <div className="" key={item.id}>
+              items go here
+            </div>
+          ))}
         </div>
 
       </div>

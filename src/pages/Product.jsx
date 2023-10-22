@@ -1,10 +1,18 @@
 import { productData } from "../newProductData";
 import { useParams } from "react-router-dom";
+import ShoppingBasket from "../assets/ShoppingBasket";
+import { useBasket } from "../context/BasketContext";
 
 
 const Product = () => {
   const productId = `${useParams().productId}`;
   const currentProduct = productData[productId];
+
+  const { addToBasket } = useBasket();
+
+  const handleAddToBasket = () => {
+    addToBasket(currentProduct);
+  }
 
   return (
     <div className="w-full flex flex-row items-center justify-center font-[quicksand]">
@@ -39,7 +47,12 @@ const Product = () => {
             <div className="font-semibold">TOP</div>
             <div className="text-sm">{currentProduct.top}</div>
           </div>
+          
         </div>
+
+        <button onClick={handleAddToBasket}>
+          add to basket
+        </button>
       </div>
     </div>
   );
